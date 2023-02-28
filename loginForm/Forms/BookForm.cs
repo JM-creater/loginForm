@@ -145,5 +145,13 @@ namespace loginForm
             this.Hide();
             men.Show();
         }
+
+        private void txt_SearchBox_Click(object sender, EventArgs e)
+        {
+            if (txt_SearchBox.Text != "")
+            {
+                txt_SearchBox.Clear();
+            }
+        }
     }
 }

@@ -120,6 +120,7 @@
             this.txt_SearchBox.Name = "txt_SearchBox";
             this.txt_SearchBox.Size = new System.Drawing.Size(153, 22);
             this.txt_SearchBox.TabIndex = 4;
+            this.txt_SearchBox.Click += new System.EventHandler(this.txt_SearchBox_Click);
             this.txt_SearchBox.TextChanged += new System.EventHandler(this.txt_SearchBox_TextChanged);
             // 
             // datagrid_Book

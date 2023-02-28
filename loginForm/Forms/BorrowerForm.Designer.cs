@@ -62,6 +62,7 @@
             this.txt_FnameSearch.Name = "txt_FnameSearch";
             this.txt_FnameSearch.Size = new System.Drawing.Size(243, 22);
             this.txt_FnameSearch.TabIndex = 0;
+            this.txt_FnameSearch.Click += new System.EventHandler(this.txt_FnameSearch_Click);
             this.txt_FnameSearch.TextChanged += new System.EventHandler(this.txt_FnameSearch_TextChanged);
             // 
             // txt_BorrowerID

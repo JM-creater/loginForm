@@ -131,5 +131,13 @@ namespace loginForm
             this.Hide();
             em.Show();
         }
+
+        private void txt_FnameSearch_Click(object sender, EventArgs e)
+        {
+            if (txt_FnameSearch.Text != "")
+            {
+                txt_FnameSearch.Clear();
+            }
+        }
     }
 }
