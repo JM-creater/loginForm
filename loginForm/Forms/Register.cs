@@ -22,6 +22,19 @@ namespace loginForm
             InitializeComponent();
         }
 
+        private const int dp = 0x00020000;
+
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams cp = base.CreateParams;
+                cp.ClassStyle |= dp;
+                return cp;
+            }
+        }
+
+
         public static bool IsValidPass(string newPass)
         {
             string strRegex = @"^(?:[A-Z][a-zA-Z0-9_\W]+)?$"; //@"^[A-Z][a-zA-Z0-9_\W]+$"
@@ -35,6 +48,60 @@ namespace loginForm
                 return false;  
             }
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            LoginForm fm = new LoginForm();
+            this.Hide();
+            fm.Show();
+        }
+
+        private void btn_signup_Click(object sender, EventArgs e)
+        {
+            var acc = User.Read(txt_user.Text);
+
+            if (txt_user.Text != "" && txt_pass.Text == txt_conpass.Text && acc == null)
+            {
+                User.Create(txt_user.Text.ToLower(), Encrypt(txt_pass.Text));
+                notifyIcon1.BalloonTipTitle = "REGISTER";
+                notifyIcon1.BalloonTipText = txt_user.Text + " has Successfully login!";
+                notifyIcon1.ShowBalloonTip(1000);
+                txt_user.Clear();
+                txt_pass.Clear();
+                txt_conpass.Clear();
+                txt_user.Focus();
+
+            }
+            else if (txt_user.Text == "" && txt_pass.Text != "" && txt_conpass.Text != "")
+            {
+                notifyIcon1.BalloonTipTitle = "Information";
+                notifyIcon1.BalloonTipText = "Please input username";
+                notifyIcon1.ShowBalloonTip(1000);
+            }
+            else if (txt_user.Text != "" && txt_pass.Text == "" && txt_conpass.Text != "")
+            {
+                notifyIcon1.BalloonTipTitle = "Information";
+                notifyIcon1.BalloonTipText = "Please input password";
+                notifyIcon1.ShowBalloonTip(1000);
+            }
+            else if (txt_user.Text != "" && txt_pass.Text != "" && txt_conpass.Text == "")
+            {
+                notifyIcon1.BalloonTipTitle = "Information";
+                notifyIcon1.BalloonTipText = "Please confirm password";
+                notifyIcon1.ShowBalloonTip(1000);
+            }
+            else
+            {
+                notifyIcon1.BalloonTipTitle = "ERROR";
+                notifyIcon1.BalloonTipText = "Unable to register";
+                notifyIcon1.ShowBalloonTip(1000);
+                txt_user.Clear();
+                txt_pass.Clear();
+                txt_conpass.Clear();
+                txt_user.Focus();
+            }
+        }
+
 
         public static string Decrypt(string cipherText)
         {
@@ -83,30 +150,6 @@ namespace loginForm
                 }
             }
             return encryptString;
-        }
-
-        private void btn_signup_Click(object sender, EventArgs e)
-        {
-            var acc = User.Read(txt_user.Text);
-            
-            if (txt_user.Text != "" && txt_pass.Text == txt_conpass.Text && acc == null)
-            {
-                User.Create(txt_user.Text.ToLower(), Encrypt(txt_pass.Text));
-                MessageBox.Show("You Have Successfully Registered!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txt_user.Clear();
-                txt_pass.Clear();
-                txt_conpass.Clear();
-                txt_user.Focus();
-
-            }
-            else
-            {
-                MessageBox.Show("Unable to register!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txt_user.Clear();
-                txt_pass.Clear();
-                txt_conpass.Clear();
-                txt_user.Focus();
-            }
         }
     }
 }

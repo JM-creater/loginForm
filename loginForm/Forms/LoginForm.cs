@@ -23,36 +23,15 @@ namespace loginForm
             
         }
 
-        private void btn_register_Click(object sender, EventArgs e)
+        private const int dp = 0x00020000;
+
+        protected override CreateParams CreateParams
         {
-            Register reg = new Register();
-
-            this.Hide();
-            reg.Show();
-
-        }
-
-        private void btn_login_Click(object sender, EventArgs e)
-        {
-            var account = User.Login(txt_username.Text, Encrypt(txt_password.Text));
-            if(account != null) 
+            get
             {
-                MessageBox.Show("Successfully login!","Log In", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                Menu menu = new Menu();
-                menu.Source = account;
-
-                menu.Show();
-                this.Hide();
-                txt_username.Clear();
-                txt_password.Clear();
-                txt_username.Focus();
-            }
-            else
-            {
-                MessageBox.Show("User not found!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txt_username.Clear();
-                txt_password.Clear();
-                txt_username.Focus();
+                CreateParams cp =  base.CreateParams;
+                cp.ClassStyle |= dp; 
+                return cp;
             }
         }
 
@@ -68,9 +47,57 @@ namespace loginForm
             }
         }
 
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Register reg = new Register();
+
+            this.Hide();
+            reg.Show();
+        }
+
+        private void linkLabel1_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            forgotPassword fp = new forgotPassword();
+            fp.Show();
+            this.Hide();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btn_login_Click(object sender, EventArgs e)
+        {
+            var account = User.Login(txt_username.Text, Encrypt(txt_password.Text));
+            if (account != null)
+            {
+                notifyIcon1.BalloonTipTitle = "LOGIN";
+                notifyIcon1.BalloonTipText = txt_username.Text + " has Successfully login!";
+                notifyIcon1.ShowBalloonTip(1000);
+                Menu menu = new Menu();
+                menu.Source = account;
+
+                menu.Show();
+                this.Hide();
+                txt_username.Clear();
+                txt_password.Clear();
+                txt_username.Focus();
+            }
+            else
+            {
+                notifyIcon1.BalloonTipTitle = "ERROR";
+                notifyIcon1.BalloonTipText = "User not found";
+                notifyIcon1.ShowBalloonTip(1000);
+                txt_username.Clear();
+                txt_password.Clear();
+                txt_username.Focus();
+            }
+        }
+
         public static string Decrypt(string cipherText)
         {
-            string EncryptionKey = "0ram@1234xxxxxxxxxxtttttuuuuuiiiiio";     
+            string EncryptionKey = "0ram@1234xxxxxxxxxxtttttuuuuuiiiiio";
             cipherText = cipherText.Replace(" ", "+");
             byte[] cipherBytes = Convert.FromBase64String(cipherText);
             using (Aes encryptor = Aes.Create())
@@ -95,7 +122,7 @@ namespace loginForm
 
         public static string Encrypt(string encryptString)
         {
-            string EncryptionKey = "0ram@1234xxxxxxxxxxtttttuuuuuiiiiio"; 
+            string EncryptionKey = "0ram@1234xxxxxxxxxxtttttuuuuuiiiiio";
             byte[] clearBytes = Encoding.Unicode.GetBytes(encryptString);
             using (Aes encryptor = Aes.Create())
             {
@@ -115,11 +142,6 @@ namespace loginForm
                 }
             }
             return encryptString;
-        }
-
-        private void LoginForm_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

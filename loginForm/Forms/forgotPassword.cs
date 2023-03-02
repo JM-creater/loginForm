@@ -22,9 +22,48 @@ namespace loginForm.Forms
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
+        private const int dp = 0x00020000;
 
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams cp = base.CreateParams;
+                cp.ClassStyle |= dp;
+                return cp;
+            }
+        }
+
+        private void gunaEnter_Click(object sender, EventArgs e)
+        {
+            if (gunaUser.Text != "")
+            {
+                SqlConnection con = new SqlConnection(Database.ConnectionString);
+                SqlCommand Comm1 = new SqlCommand("SELECT User_password FROM dbo.table_user WHERE User_username = '" + gunaUser.Text + "'", con);
+                con.Open();
+                SqlDataReader DR1 = Comm1.ExecuteReader();
+                if (DR1.Read())
+                {
+                    notifyIcon1.BalloonTipTitle = "PASSWORD";
+                    notifyIcon1.BalloonTipText = gunaUser.Text + " has retrieved password!";
+                    notifyIcon1.ShowBalloonTip(1000);
+                    gunaPass.Text = Decrypt(DR1.GetValue(0).ToString());
+                }
+                con.Close();
+            }
+            else
+            {
+                notifyIcon1.BalloonTipTitle = "ERROR";
+                notifyIcon1.BalloonTipText = "Please Input Username";
+                notifyIcon1.ShowBalloonTip(1000);
+            }
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            LoginForm fm = new LoginForm();
+            this.Hide();
+            fm.Show();
         }
 
         public static string Decrypt(string cipherText)
@@ -76,24 +115,5 @@ namespace loginForm.Forms
             return encryptString;
         }
 
-        private void materialEnter_Click(object sender, EventArgs e)
-        {
-            if (materialUser.Text != "")
-            {
-                SqlConnection con = new SqlConnection(Database.ConnectionString);
-                SqlCommand Comm1 = new SqlCommand("SELECT User_password FROM dbo.table_user WHERE User_username = '" + materialUser.Text + "'", con);
-                con.Open();
-                SqlDataReader DR1 = Comm1.ExecuteReader();
-                if (DR1.Read())
-                {
-                    materialPass.Text = Decrypt(DR1.GetValue(0).ToString());
-                }
-                con.Close();
-            }
-            else
-            {
-                MessageBox.Show("Please Input Username", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-        }
     }
 }
