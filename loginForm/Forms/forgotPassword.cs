@@ -95,12 +95,5 @@ namespace loginForm.Forms
                 MessageBox.Show("Please Input Username", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-
-        private void materialButton1_Click(object sender, EventArgs e)
-        {
-            LoginForm login = new LoginForm();
-            this.Hide();
-            login.Show();
-        }
     }
 }

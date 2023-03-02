@@ -54,7 +54,6 @@ namespace loginForm
                 txt_password.Clear();
                 txt_username.Focus();
             }
-            
         }
 
         private void chkShowHide_CheckedChanged(object sender, EventArgs e)
@@ -67,14 +66,6 @@ namespace loginForm
             {
                 txt_password.UseSystemPasswordChar = true;
             }
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            forgotPassword fp = new forgotPassword();
-            fp.Show();
-            this.Hide();
-
         }
 
         public static string Decrypt(string cipherText)

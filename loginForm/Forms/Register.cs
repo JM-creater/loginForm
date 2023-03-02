@@ -108,17 +108,5 @@ namespace loginForm
                 txt_user.Focus();
             }
         }
-
-        private void btn_cancel_Click(object sender, EventArgs e)
-        {
-            LoginForm fm = new LoginForm();
-            this.Hide();
-            fm.Show();
-        }
-
-        private void Register_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
