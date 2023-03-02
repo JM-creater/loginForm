@@ -46,7 +46,8 @@ namespace loginForm.Forms
                 {
                     notifyIcon1.BalloonTipTitle = "PASSWORD";
                     notifyIcon1.BalloonTipText = gunaUser.Text + " has retrieved password!";
-                    notifyIcon1.ShowBalloonTip(1000);
+                    notifyIcon1.ShowBalloonTip(100);
+                    notifyIcon1.Dispose();
                     gunaPass.Text = Decrypt(DR1.GetValue(0).ToString());
                 }
                 con.Close();
@@ -55,7 +56,8 @@ namespace loginForm.Forms
             {
                 notifyIcon1.BalloonTipTitle = "ERROR";
                 notifyIcon1.BalloonTipText = "Please Input Username";
-                notifyIcon1.ShowBalloonTip(1000);
+                notifyIcon1.ShowBalloonTip(100);
+                notifyIcon1.Dispose();
             }
         }
 

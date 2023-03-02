@@ -65,7 +65,8 @@ namespace loginForm
                 User.Create(txt_user.Text.ToLower(), Encrypt(txt_pass.Text));
                 notifyIcon1.BalloonTipTitle = "REGISTER";
                 notifyIcon1.BalloonTipText = txt_user.Text + " has Successfully login!";
-                notifyIcon1.ShowBalloonTip(1000);
+                notifyIcon1.ShowBalloonTip(100);
+                notifyIcon1.Dispose();
                 txt_user.Clear();
                 txt_pass.Clear();
                 txt_conpass.Clear();
@@ -76,25 +77,29 @@ namespace loginForm
             {
                 notifyIcon1.BalloonTipTitle = "Information";
                 notifyIcon1.BalloonTipText = "Please input username";
-                notifyIcon1.ShowBalloonTip(1000);
+                notifyIcon1.ShowBalloonTip(100);
+                notifyIcon1.Dispose();
             }
             else if (txt_user.Text != "" && txt_pass.Text == "" && txt_conpass.Text != "")
             {
                 notifyIcon1.BalloonTipTitle = "Information";
                 notifyIcon1.BalloonTipText = "Please input password";
-                notifyIcon1.ShowBalloonTip(1000);
+                notifyIcon1.ShowBalloonTip(100);
+                notifyIcon1.Dispose();
             }
             else if (txt_user.Text != "" && txt_pass.Text != "" && txt_conpass.Text == "")
             {
                 notifyIcon1.BalloonTipTitle = "Information";
                 notifyIcon1.BalloonTipText = "Please confirm password";
-                notifyIcon1.ShowBalloonTip(1000);
+                notifyIcon1.ShowBalloonTip(100);
+                notifyIcon1.Dispose();
             }
             else
             {
                 notifyIcon1.BalloonTipTitle = "ERROR";
                 notifyIcon1.BalloonTipText = "Unable to register";
-                notifyIcon1.ShowBalloonTip(1000);
+                notifyIcon1.ShowBalloonTip(100);
+                notifyIcon1.Dispose();
                 txt_user.Clear();
                 txt_pass.Clear();
                 txt_conpass.Clear();

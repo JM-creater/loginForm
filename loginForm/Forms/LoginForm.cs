@@ -64,7 +64,8 @@ namespace loginForm
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            
+            notifyIcon1.Dispose();
+            Application.Exit();
         }
 
         private void btn_login_Click(object sender, EventArgs e)
@@ -74,7 +75,8 @@ namespace loginForm
             {
                 notifyIcon1.BalloonTipTitle = "LOGIN";
                 notifyIcon1.BalloonTipText = txt_username.Text + " has Successfully login!";
-                notifyIcon1.ShowBalloonTip(1000);
+                notifyIcon1.ShowBalloonTip(100);
+                notifyIcon1.Dispose();
                 Menu menu = new Menu();
                 menu.Source = account;
 
@@ -88,7 +90,8 @@ namespace loginForm
             {
                 notifyIcon1.BalloonTipTitle = "ERROR";
                 notifyIcon1.BalloonTipText = "User not found";
-                notifyIcon1.ShowBalloonTip(1000);
+                notifyIcon1.ShowBalloonTip(100);
+                notifyIcon1.Dispose();
                 txt_username.Clear();
                 txt_password.Clear();
                 txt_username.Focus();
