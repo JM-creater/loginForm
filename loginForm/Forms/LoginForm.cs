@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using login.form;
+using loginForm.Forms;
 
 namespace loginForm
 {
@@ -19,6 +20,7 @@ namespace loginForm
         public LoginForm()
         {
             InitializeComponent();
+            
         }
 
         private void btn_register_Click(object sender, EventArgs e)
@@ -69,22 +71,9 @@ namespace loginForm
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (txt_username.Text != "")
-            {
-                SqlConnection con = new SqlConnection(Database.ConnectionString);
-                SqlCommand Comm1 = new SqlCommand("SELECT User_password FROM dbo.table_user WHERE User_username = '" + txt_username.Text + "'", con);
-                con.Open();
-                SqlDataReader DR1 = Comm1.ExecuteReader();
-                if (DR1.Read())
-                {
-                    txt_Retrieve.Text = Decrypt(DR1.GetValue(0).ToString());
-                }
-                con.Close();
-            }
-            else
-            {
-                MessageBox.Show("Please Input Username", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            forgotPassword fp = new forgotPassword();
+            fp.Show();
+            this.Hide();
 
         }
 

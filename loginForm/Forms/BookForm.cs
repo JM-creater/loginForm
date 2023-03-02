@@ -141,9 +141,7 @@ namespace loginForm
 
         private void btn_ex_Click(object sender, EventArgs e)
         {
-            Menu men = new Menu();
-            this.Hide();
-            men.Show();
+            this.Close();
         }
 
         private void txt_SearchBox_Click(object sender, EventArgs e)

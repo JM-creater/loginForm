@@ -169,9 +169,11 @@
             this.Controls.Add(this.txt_FnameSearch);
             this.Controls.Add(this.txt_Lastname);
             this.Controls.Add(this.txt_Firstname);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "BorrowerForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Borrower";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.BorrowerForm_FormClosing);
             this.Load += new System.EventHandler(this.Borrower_Load);
             ((System.ComponentModel.ISupportInitialize)(this.datagrid_Borrower)).EndInit();
             this.ResumeLayout(false);

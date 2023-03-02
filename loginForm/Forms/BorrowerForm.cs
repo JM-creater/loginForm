@@ -127,9 +127,7 @@ namespace loginForm
 
         private void btn_Close_Click(object sender, EventArgs e)
         {
-            Menu em = new Menu();
-            this.Hide();
-            em.Show();
+            this.Close();
         }
 
         private void txt_FnameSearch_Click(object sender, EventArgs e)
@@ -138,6 +136,13 @@ namespace loginForm
             {
                 txt_FnameSearch.Clear();
             }
+        }
+
+        private void BorrowerForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
+            BorrowerForm borrow = new BorrowerForm();
+            borrow.Close();
         }
     }
 }

@@ -180,6 +180,7 @@
             this.Controls.Add(this.btn_DeleteBook);
             this.Controls.Add(this.btn_EditBook);
             this.Controls.Add(this.btn_AddBook);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "BookForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HomeUser";

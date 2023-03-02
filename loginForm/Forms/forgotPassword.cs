@@ -1,44 +1,35 @@
 ﻿using login.form;
+using MaterialSkin;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
-namespace loginForm
+namespace loginForm.Forms
 {
-    public partial class Register : Form
+    public partial class forgotPassword : Form
     {
-        public Register()
+        public forgotPassword()
         {
             InitializeComponent();
         }
 
-        public static bool IsValidPass(string newPass)
+        private void label1_Click(object sender, EventArgs e)
         {
-            string strRegex = @"^(?:[A-Z][a-zA-Z0-9_\W]+)?$"; //@"^[A-Z][a-zA-Z0-9_\W]+$"
-            Regex reg = new Regex(strRegex);
-            if (reg.IsMatch(newPass))
-            {
-                return true;
-            }
-            else
-            {
-                return false;  
-            }
+
         }
 
         public static string Decrypt(string cipherText)
         {
-            string EncryptionKey = "0ram@1234xxxxxxxxxxtttttuuuuuiiiiio";  //we can change the code converstion key as per our requirement, but the decryption key should be same as encryption key    
+            string EncryptionKey = "0ram@1234xxxxxxxxxxtttttuuuuuiiiiio";
             cipherText = cipherText.Replace(" ", "+");
             byte[] cipherBytes = Convert.FromBase64String(cipherText);
             using (Aes encryptor = Aes.Create())
@@ -63,7 +54,7 @@ namespace loginForm
 
         public static string Encrypt(string encryptString)
         {
-            string EncryptionKey = "0ram@1234xxxxxxxxxxtttttuuuuuiiiiio";  //we can change the code converstion key as per our requirement    
+            string EncryptionKey = "0ram@1234xxxxxxxxxxtttttuuuuuiiiiio";
             byte[] clearBytes = Encoding.Unicode.GetBytes(encryptString);
             using (Aes encryptor = Aes.Create())
             {
@@ -85,40 +76,31 @@ namespace loginForm
             return encryptString;
         }
 
-        private void btn_signup_Click(object sender, EventArgs e)
+        private void materialEnter_Click(object sender, EventArgs e)
         {
-            var acc = User.Read(txt_user.Text);
-            
-            if (txt_user.Text != "" && txt_pass.Text == txt_conpass.Text && acc == null)
+            if (materialUser.Text != "")
             {
-                User.Create(txt_user.Text.ToLower(), Encrypt(txt_pass.Text));
-                MessageBox.Show("You Have Successfully Registered!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txt_user.Clear();
-                txt_pass.Clear();
-                txt_conpass.Clear();
-                txt_user.Focus();
-
+                SqlConnection con = new SqlConnection(Database.ConnectionString);
+                SqlCommand Comm1 = new SqlCommand("SELECT User_password FROM dbo.table_user WHERE User_username = '" + materialUser.Text + "'", con);
+                con.Open();
+                SqlDataReader DR1 = Comm1.ExecuteReader();
+                if (DR1.Read())
+                {
+                    materialPass.Text = Decrypt(DR1.GetValue(0).ToString());
+                }
+                con.Close();
             }
             else
             {
-                MessageBox.Show("Unable to register!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txt_user.Clear();
-                txt_pass.Clear();
-                txt_conpass.Clear();
-                txt_user.Focus();
+                MessageBox.Show("Please Input Username", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
-        private void btn_cancel_Click(object sender, EventArgs e)
+        private void materialButton1_Click(object sender, EventArgs e)
         {
-            LoginForm fm = new LoginForm();
+            LoginForm login = new LoginForm();
             this.Hide();
-            fm.Show();
-        }
-
-        private void Register_Load(object sender, EventArgs e)
-        {
-
+            login.Show();
         }
     }
 }
