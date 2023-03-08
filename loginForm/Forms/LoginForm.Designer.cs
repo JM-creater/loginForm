@@ -75,7 +75,7 @@
             this.txt_password.Location = new System.Drawing.Point(74, 467);
             this.txt_password.Name = "txt_password";
             this.txt_password.Size = new System.Drawing.Size(266, 17);
-            this.txt_password.TabIndex = 1;
+            this.txt_password.TabIndex = 2;
             this.txt_password.UseSystemPasswordChar = true;
             // 
             // label1
@@ -254,7 +254,7 @@
             this.btn_login.OnPressedColor = System.Drawing.Color.Black;
             this.btn_login.Radius = 8;
             this.btn_login.Size = new System.Drawing.Size(266, 42);
-            this.btn_login.TabIndex = 14;
+            this.btn_login.TabIndex = 3;
             this.btn_login.Text = "LOGIN";
             this.btn_login.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btn_login.Click += new System.EventHandler(this.btn_login_Click);
