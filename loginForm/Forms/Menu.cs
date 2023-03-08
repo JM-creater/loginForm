@@ -71,7 +71,7 @@ namespace loginForm
         private void gunaGradientButton4_Click(object sender, EventArgs e)
         {
             BorrowerForm bw = new BorrowerForm();
-            bw.Show();
+           AddNewTab(bw);
         }
 
         private void gunaGradientButton3_Click(object sender, EventArgs e)
@@ -93,27 +93,22 @@ namespace loginForm
             lf.Show();
         }
 
-
-
-
         private void AddNewTab(Form frm)
         {
-
             TabPage tab = new TabPage(frm.Text);
-
             frm.TopLevel = false;
-
             frm.Parent = tab;
-
             frm.Visible = true;
-
             tabControl1.TabPages.Add(tab);
-
             frm.Location = new Point((tab.Width - frm.Width) / 2, (tab.Height - frm.Height) / 2);
-
             tabControl1.SelectedTab = tab;
-
         }
 
+        private void Menu_Load(object sender, EventArgs e)
+        {
+            tabControl1.Appearance = TabAppearance.FlatButtons;
+            tabControl1.ItemSize = new Size(0, 1);
+            tabControl1.SizeMode = TabSizeMode.Fixed;
+        }
     }
 }

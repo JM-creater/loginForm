@@ -71,6 +71,9 @@ namespace loginForm
                 txt_pass.Clear();
                 txt_conpass.Clear();
                 txt_user.Focus();
+                LoginForm login = new LoginForm();
+                login.Show();
+                this.Hide();
 
             }
             else if (txt_user.Text == "" && txt_pass.Text != "" && txt_conpass.Text != "")

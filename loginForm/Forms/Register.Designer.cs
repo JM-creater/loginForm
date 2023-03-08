@@ -75,7 +75,7 @@
             this.txt_pass.Location = new System.Drawing.Point(511, 230);
             this.txt_pass.Name = "txt_pass";
             this.txt_pass.Size = new System.Drawing.Size(304, 17);
-            this.txt_pass.TabIndex = 0;
+            this.txt_pass.TabIndex = 1;
             // 
             // txt_conpass
             // 
@@ -86,7 +86,7 @@
             this.txt_conpass.Location = new System.Drawing.Point(511, 304);
             this.txt_conpass.Name = "txt_conpass";
             this.txt_conpass.Size = new System.Drawing.Size(304, 17);
-            this.txt_conpass.TabIndex = 0;
+            this.txt_conpass.TabIndex = 3;
             // 
             // label1
             // 
@@ -259,7 +259,7 @@
             this.btn_signup.OnPressedColor = System.Drawing.Color.Black;
             this.btn_signup.Radius = 8;
             this.btn_signup.Size = new System.Drawing.Size(216, 42);
-            this.btn_signup.TabIndex = 9;
+            this.btn_signup.TabIndex = 4;
             this.btn_signup.Text = "SIGN UP";
             this.btn_signup.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btn_signup.Click += new System.EventHandler(this.btn_signup_Click);

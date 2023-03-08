@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BookForm));
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.btn_AddBook = new System.Windows.Forms.Button();
             this.btn_EditBook = new System.Windows.Forms.Button();
             this.btn_DeleteBook = new System.Windows.Forms.Button();
             this.txt_BookTitle = new System.Windows.Forms.TextBox();
@@ -41,19 +41,10 @@
             this.datagrid_Book = new System.Windows.Forms.DataGridView();
             this.txt_BookID = new System.Windows.Forms.TextBox();
             this.btn_ex = new System.Windows.Forms.Button();
+            this.btn_AddBook = new Guna.UI.WinForms.GunaGradientButton();
             ((System.ComponentModel.ISupportInitialize)(this.numeric_BookQty)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.datagrid_Book)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btn_AddBook
-            // 
-            this.btn_AddBook.Location = new System.Drawing.Point(214, 171);
-            this.btn_AddBook.Name = "btn_AddBook";
-            this.btn_AddBook.Size = new System.Drawing.Size(82, 30);
-            this.btn_AddBook.TabIndex = 0;
-            this.btn_AddBook.Text = "Add";
-            this.btn_AddBook.UseVisualStyleBackColor = true;
-            this.btn_AddBook.Click += new System.EventHandler(this.btn_AddBook_Click);
             // 
             // btn_EditBook
             // 
@@ -163,11 +154,38 @@
             this.btn_ex.UseVisualStyleBackColor = true;
             this.btn_ex.Click += new System.EventHandler(this.btn_ex_Click);
             // 
+            // btn_AddBook
+            // 
+            this.btn_AddBook.AnimationHoverSpeed = 0.07F;
+            this.btn_AddBook.AnimationSpeed = 0.03F;
+            this.btn_AddBook.BaseColor1 = System.Drawing.Color.SlateBlue;
+            this.btn_AddBook.BaseColor2 = System.Drawing.Color.Fuchsia;
+            this.btn_AddBook.BorderColor = System.Drawing.Color.Black;
+            this.btn_AddBook.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_AddBook.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_AddBook.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_AddBook.ForeColor = System.Drawing.Color.White;
+            this.btn_AddBook.Image = ((System.Drawing.Image)(resources.GetObject("btn_AddBook.Image")));
+            this.btn_AddBook.ImageSize = new System.Drawing.Size(20, 20);
+            this.btn_AddBook.Location = new System.Drawing.Point(426, 104);
+            this.btn_AddBook.Name = "btn_AddBook";
+            this.btn_AddBook.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
+            this.btn_AddBook.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
+            this.btn_AddBook.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btn_AddBook.OnHoverForeColor = System.Drawing.Color.White;
+            this.btn_AddBook.OnHoverImage = null;
+            this.btn_AddBook.OnPressedColor = System.Drawing.Color.Black;
+            this.btn_AddBook.Size = new System.Drawing.Size(160, 42);
+            this.btn_AddBook.TabIndex = 8;
+            this.btn_AddBook.Text = "Add";
+            this.btn_AddBook.Click += new System.EventHandler(this.btn_AddBook_Click);
+            // 
             // BookForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(585, 450);
+            this.Controls.Add(this.btn_AddBook);
             this.Controls.Add(this.btn_ex);
             this.Controls.Add(this.txt_BookID);
             this.Controls.Add(this.datagrid_Book);
@@ -179,7 +197,6 @@
             this.Controls.Add(this.txt_BookTitle);
             this.Controls.Add(this.btn_DeleteBook);
             this.Controls.Add(this.btn_EditBook);
-            this.Controls.Add(this.btn_AddBook);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "BookForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -194,7 +211,6 @@
 
         #endregion
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.Windows.Forms.Button btn_AddBook;
         private System.Windows.Forms.Button btn_EditBook;
         private System.Windows.Forms.Button btn_DeleteBook;
         private System.Windows.Forms.TextBox txt_BookTitle;
@@ -206,5 +222,6 @@
         private System.Windows.Forms.DataGridView datagrid_Book;
         private System.Windows.Forms.TextBox txt_BookID;
         private System.Windows.Forms.Button btn_ex;
+        private Guna.UI.WinForms.GunaGradientButton btn_AddBook;
     }
 }
