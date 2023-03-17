@@ -123,7 +123,7 @@
             this.datagrid_Book.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.datagrid_Book.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
             this.datagrid_Book.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.datagrid_Book.Cursor = System.Windows.Forms.Cursors.UpArrow;
+            this.datagrid_Book.Cursor = System.Windows.Forms.Cursors.Hand;
             this.datagrid_Book.Location = new System.Drawing.Point(42, 223);
             this.datagrid_Book.Name = "datagrid_Book";
             this.datagrid_Book.ReadOnly = true;
@@ -167,7 +167,7 @@
             this.btn_AddBook.ForeColor = System.Drawing.Color.White;
             this.btn_AddBook.Image = ((System.Drawing.Image)(resources.GetObject("btn_AddBook.Image")));
             this.btn_AddBook.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_AddBook.Location = new System.Drawing.Point(426, 104);
+            this.btn_AddBook.Location = new System.Drawing.Point(380, 104);
             this.btn_AddBook.Name = "btn_AddBook";
             this.btn_AddBook.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
             this.btn_AddBook.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));

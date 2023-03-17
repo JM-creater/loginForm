@@ -146,7 +146,5 @@ namespace loginForm
             }
             return encryptString;
         }
-
-      
     }
 }

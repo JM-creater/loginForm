@@ -82,7 +82,7 @@
             this.datagrid_Borrower.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.datagrid_Borrower.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
             this.datagrid_Borrower.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.datagrid_Borrower.Cursor = System.Windows.Forms.Cursors.UpArrow;
+            this.datagrid_Borrower.Cursor = System.Windows.Forms.Cursors.Hand;
             this.datagrid_Borrower.Location = new System.Drawing.Point(40, 154);
             this.datagrid_Borrower.Name = "datagrid_Borrower";
             this.datagrid_Borrower.ReadOnly = true;

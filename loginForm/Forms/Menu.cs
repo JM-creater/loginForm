@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using login.form;
+using loginForm.Forms;
 
 namespace loginForm
 {
@@ -62,28 +63,24 @@ namespace loginForm
             gunaTransition1.ShowSync(gunaPanel1);
         }
 
-        private void gunaGradientButton2_Click(object sender, EventArgs e)
-        {
-            BookForm bk = new BookForm();
-            AddNewTab(bk);
-        }
+       
 
         private void gunaGradientButton4_Click(object sender, EventArgs e)
         {
-            BorrowerForm bw = new BorrowerForm();
-           AddNewTab(bw);
+            BorrowerForm borrowerForm = new BorrowerForm();
+            AddNewTab(borrowerForm);
         }
 
         private void gunaGradientButton3_Click(object sender, EventArgs e)
         {
             TransactionForm tf = new TransactionForm();
-            tf.Show();
+            AddNewTab(tf);
         }
 
         private void gunaGradientButton6_Click(object sender, EventArgs e)
         {
             ReportForm rf = new ReportForm();
-            rf.Show();
+            AddNewTab(rf);
         }
 
         private void gunaGradientButton5_Click(object sender, EventArgs e)
@@ -109,6 +106,24 @@ namespace loginForm
             tabControl1.Appearance = TabAppearance.FlatButtons;
             tabControl1.ItemSize = new Size(0, 1);
             tabControl1.SizeMode = TabSizeMode.Fixed;
+        }
+
+        private void gunaGradientButton1_Click(object sender, EventArgs e)
+        {
+            BookForm bk = new BookForm();
+            AddNewTab(bk);
+        }
+
+        private void gunaGradientButton8_Click(object sender, EventArgs e)
+        {
+            BorrowForm bk = new BorrowForm();
+            AddNewTab(bk);
+        }
+
+        private void gunaGradientButton9_Click(object sender, EventArgs e)
+        {
+            ReturnForm bk = new ReturnForm();
+            AddNewTab(bk);
         }
     }
 }
