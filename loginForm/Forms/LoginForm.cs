@@ -77,10 +77,9 @@ namespace loginForm
                 notifyIcon1.BalloonTipText = txt_username.Text + " has Successfully login!";
                 notifyIcon1.ShowBalloonTip(100);
                 notifyIcon1.Dispose();
-                Menu menu = new Menu();
-                menu.Source = account;
 
-                menu.Show();
+                loadingScreenForm loadingScreenForm = new loadingScreenForm();
+                loadingScreenForm.Show();
                 this.Hide();
                 txt_username.Clear();
                 txt_password.Clear();

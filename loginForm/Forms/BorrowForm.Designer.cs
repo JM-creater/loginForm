@@ -85,7 +85,7 @@
             this.btn_Borrow.BorderColor = System.Drawing.Color.Black;
             this.btn_Borrow.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btn_Borrow.FocusedColor = System.Drawing.Color.Empty;
-            this.btn_Borrow.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_Borrow.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Borrow.ForeColor = System.Drawing.Color.White;
             this.btn_Borrow.Image = null;
             this.btn_Borrow.ImageSize = new System.Drawing.Size(20, 20);
@@ -118,22 +118,22 @@
             // gunaLabel2
             // 
             this.gunaLabel2.AutoSize = true;
-            this.gunaLabel2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gunaLabel2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.gunaLabel2.Location = new System.Drawing.Point(243, 129);
+            this.gunaLabel2.Location = new System.Drawing.Point(243, 126);
             this.gunaLabel2.Name = "gunaLabel2";
-            this.gunaLabel2.Size = new System.Drawing.Size(79, 20);
+            this.gunaLabel2.Size = new System.Drawing.Size(89, 23);
             this.gunaLabel2.TabIndex = 4;
             this.gunaLabel2.Text = "Book Title:";
             // 
             // gunaLabel3
             // 
             this.gunaLabel3.AutoSize = true;
-            this.gunaLabel3.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gunaLabel3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.gunaLabel3.Location = new System.Drawing.Point(243, 239);
+            this.gunaLabel3.Location = new System.Drawing.Point(243, 236);
             this.gunaLabel3.Name = "gunaLabel3";
-            this.gunaLabel3.Size = new System.Drawing.Size(126, 20);
+            this.gunaLabel3.Size = new System.Drawing.Size(145, 23);
             this.gunaLabel3.TabIndex = 4;
             this.gunaLabel3.Text = "Borrower\'s Name:";
             // 

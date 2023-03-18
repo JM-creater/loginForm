@@ -43,14 +43,14 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gunaGradientPanel1 = new Guna.UI.WinForms.GunaGradientPanel();
             this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.btn_signup = new Guna.UI.WinForms.GunaButton();
             this.gunaDragControl1 = new Guna.UI.WinForms.GunaDragControl(this.components);
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.label7 = new System.Windows.Forms.Label();
+            this.lbl_reg = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.gunaGradientPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -188,19 +188,6 @@
             this.panel5.Size = new System.Drawing.Size(304, 1);
             this.panel5.TabIndex = 5;
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(827, 0);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(50, 44);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 7;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
@@ -275,15 +262,42 @@
             this.notifyIcon1.Text = "notifyIcon1";
             this.notifyIcon1.Visible = true;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label7.Location = new System.Drawing.Point(549, 445);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(144, 20);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "Have an account?";
+            // 
+            // lbl_reg
+            // 
+            this.lbl_reg.AutoSize = true;
+            this.lbl_reg.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_reg.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_reg.LinkColor = System.Drawing.Color.IndianRed;
+            this.lbl_reg.Location = new System.Drawing.Point(713, 445);
+            this.lbl_reg.Name = "lbl_reg";
+            this.lbl_reg.Size = new System.Drawing.Size(60, 20);
+            this.lbl_reg.TabIndex = 12;
+            this.lbl_reg.TabStop = true;
+            this.lbl_reg.Text = "Sign In";
+            this.lbl_reg.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lbl_reg_LinkClicked);
+            // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(48)))), ((int)(((byte)(76)))));
             this.ClientSize = new System.Drawing.Size(878, 517);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.lbl_reg);
             this.Controls.Add(this.btn_signup);
             this.Controls.Add(this.gunaGradientPanel1);
-            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
@@ -298,7 +312,6 @@
             this.Name = "Register";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Register";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.gunaGradientPanel1.ResumeLayout(false);
             this.gunaGradientPanel1.PerformLayout();
@@ -322,12 +335,13 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Guna.UI.WinForms.GunaGradientPanel gunaGradientPanel1;
         private Guna.UI.WinForms.GunaElipse gunaElipse1;
         private Guna.UI.WinForms.GunaButton btn_signup;
         private Guna.UI.WinForms.GunaDragControl gunaDragControl1;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.LinkLabel lbl_reg;
     }
 }

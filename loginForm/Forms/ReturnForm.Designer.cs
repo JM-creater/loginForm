@@ -40,6 +40,8 @@
             this.datagrid_Transaction = new Guna.UI.WinForms.GunaDataGridView();
             this.btn_Return = new Guna.UI.WinForms.GunaButton();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.datagrid_Transaction)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,7 +65,7 @@
             this.txt_Fullname.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txt_Fullname.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txt_Fullname.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txt_Fullname.Location = new System.Drawing.Point(129, 89);
+            this.txt_Fullname.Location = new System.Drawing.Point(70, 124);
             this.txt_Fullname.Name = "txt_Fullname";
             this.txt_Fullname.PasswordChar = '\0';
             this.txt_Fullname.SelectedText = "";
@@ -79,7 +81,7 @@
             this.txt_BookTitle.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txt_BookTitle.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txt_BookTitle.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txt_BookTitle.Location = new System.Drawing.Point(396, 89);
+            this.txt_BookTitle.Location = new System.Drawing.Point(321, 124);
             this.txt_BookTitle.Name = "txt_BookTitle";
             this.txt_BookTitle.PasswordChar = '\0';
             this.txt_BookTitle.SelectedText = "";
@@ -123,7 +125,7 @@
             dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.datagrid_Transaction.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
-            this.datagrid_Transaction.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.datagrid_Transaction.ColumnHeadersHeight = 4;
             dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 10.5F);
@@ -155,7 +157,7 @@
             this.datagrid_Transaction.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.datagrid_Transaction.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             this.datagrid_Transaction.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.datagrid_Transaction.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.datagrid_Transaction.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.datagrid_Transaction.ThemeStyle.HeaderStyle.Height = 4;
             this.datagrid_Transaction.ThemeStyle.ReadOnly = true;
             this.datagrid_Transaction.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
@@ -172,18 +174,18 @@
             this.btn_Return.AnimationHoverSpeed = 0.07F;
             this.btn_Return.AnimationSpeed = 0.03F;
             this.btn_Return.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Return.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.btn_Return.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(25)))), ((int)(((byte)(64)))));
             this.btn_Return.BorderColor = System.Drawing.Color.Black;
             this.btn_Return.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btn_Return.FocusedColor = System.Drawing.Color.Empty;
-            this.btn_Return.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_Return.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Return.ForeColor = System.Drawing.Color.White;
             this.btn_Return.Image = null;
             this.btn_Return.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_Return.Location = new System.Drawing.Point(129, 136);
+            this.btn_Return.Location = new System.Drawing.Point(628, 145);
             this.btn_Return.Name = "btn_Return";
-            this.btn_Return.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btn_Return.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btn_Return.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(24)))), ((int)(((byte)(83)))));
+            this.btn_Return.OnHoverBorderColor = System.Drawing.Color.Red;
             this.btn_Return.OnHoverForeColor = System.Drawing.Color.White;
             this.btn_Return.OnHoverImage = null;
             this.btn_Return.OnPressedColor = System.Drawing.Color.Black;
@@ -199,12 +201,36 @@
             this.notifyIcon1.Text = "notifyIcon1";
             this.notifyIcon1.Visible = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(66, 101);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(85, 20);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Full Name";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Location = new System.Drawing.Point(317, 101);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(84, 20);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Book Title";
+            // 
             // ReturnForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_Return);
             this.Controls.Add(this.datagrid_Transaction);
             this.Controls.Add(this.txt_IsReturned);
@@ -233,5 +259,7 @@
         private Guna.UI.WinForms.GunaButton btn_Return;
         private Guna.UI.WinForms.GunaDataGridView datagrid_Transaction;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

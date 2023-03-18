@@ -63,18 +63,10 @@ namespace loginForm
             gunaTransition1.ShowSync(gunaPanel1);
         }
 
-       
-
         private void gunaGradientButton4_Click(object sender, EventArgs e)
         {
             BorrowerForm borrowerForm = new BorrowerForm();
             AddNewTab(borrowerForm);
-        }
-
-        private void gunaGradientButton3_Click(object sender, EventArgs e)
-        {
-            TransactionForm tf = new TransactionForm();
-            AddNewTab(tf);
         }
 
         private void gunaGradientButton6_Click(object sender, EventArgs e)

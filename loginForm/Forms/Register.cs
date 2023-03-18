@@ -1,4 +1,5 @@
 ﻿using login.form;
+using loginForm.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -49,12 +50,6 @@ namespace loginForm
             }
         }
 
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-            LoginForm fm = new LoginForm();
-            this.Hide();
-            fm.Show();
-        }
 
         private void btn_signup_Click(object sender, EventArgs e)
         {
@@ -71,8 +66,8 @@ namespace loginForm
                 txt_pass.Clear();
                 txt_conpass.Clear();
                 txt_user.Focus();
-                LoginForm login = new LoginForm();
-                login.Show();
+                loadingScreenForm loadingScreenForm = new loadingScreenForm();
+                loadingScreenForm.Show();
                 this.Hide();
 
             }
@@ -158,6 +153,13 @@ namespace loginForm
                 }
             }
             return encryptString;
+        }
+
+        private void lbl_reg_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            LoginForm fm = new LoginForm();
+            this.Hide();
+            fm.Show();
         }
     }
 }
