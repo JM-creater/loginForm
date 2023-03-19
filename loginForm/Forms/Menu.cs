@@ -43,26 +43,6 @@ namespace loginForm
             Application.Exit();
         }
 
-        private void btn_show_Click(object sender, EventArgs e)
-        {
-            gunaPictureBox1.Visible = true;
-            btn_show.Visible = false;
-            btn_hide.Visible = true;
-            gunaPanel1.Visible = false;
-            gunaPanel1.Width = 204;
-            gunaTransition1.ShowSync(gunaPanel1);
-        }
-
-        private void btn_hide_Click(object sender, EventArgs e)
-        {
-            gunaPictureBox1.Visible = false;
-            gunaPanel1.Visible = false;
-            btn_hide.Visible = false;
-            btn_show.Visible = true;
-            gunaPanel1.Width = 40;
-            gunaTransition1.ShowSync(gunaPanel1);
-        }
-
         private void gunaGradientButton4_Click(object sender, EventArgs e)
         {
             BorrowerForm borrowerForm = new BorrowerForm();
@@ -85,11 +65,18 @@ namespace loginForm
         private void AddNewTab(Form frm)
         {
             TabPage tab = new TabPage(frm.Text);
+
             frm.TopLevel = false;
+
             frm.Parent = tab;
+
             frm.Visible = true;
+            frm.Dock = DockStyle.Fill;
+
             tabControl1.TabPages.Add(tab);
+
             frm.Location = new Point((tab.Width - frm.Width) / 2, (tab.Height - frm.Height) / 2);
+
             tabControl1.SelectedTab = tab;
         }
 

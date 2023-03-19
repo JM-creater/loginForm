@@ -37,6 +37,8 @@
             this.cb_Books = new Guna.UI.WinForms.GunaComboBox();
             this.cb_Borrowers = new Guna.UI.WinForms.GunaComboBox();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // gunaLabel3
@@ -44,7 +46,7 @@
             this.gunaLabel3.AutoSize = true;
             this.gunaLabel3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.gunaLabel3.Location = new System.Drawing.Point(323, 293);
+            this.gunaLabel3.Location = new System.Drawing.Point(78, 247);
             this.gunaLabel3.Name = "gunaLabel3";
             this.gunaLabel3.Size = new System.Drawing.Size(145, 23);
             this.gunaLabel3.TabIndex = 9;
@@ -55,7 +57,7 @@
             this.gunaLabel2.AutoSize = true;
             this.gunaLabel2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.gunaLabel2.Location = new System.Drawing.Point(323, 183);
+            this.gunaLabel2.Location = new System.Drawing.Point(78, 137);
             this.gunaLabel2.Name = "gunaLabel2";
             this.gunaLabel2.Size = new System.Drawing.Size(89, 23);
             this.gunaLabel2.TabIndex = 10;
@@ -66,7 +68,7 @@
             this.gunaLabel1.AutoSize = true;
             this.gunaLabel1.Font = new System.Drawing.Font("Arial Black", 25.8F, System.Drawing.FontStyle.Bold);
             this.gunaLabel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.gunaLabel1.Location = new System.Drawing.Point(258, 93);
+            this.gunaLabel1.Location = new System.Drawing.Point(72, 28);
             this.gunaLabel1.Name = "gunaLabel1";
             this.gunaLabel1.Size = new System.Drawing.Size(390, 60);
             this.gunaLabel1.TabIndex = 7;
@@ -86,7 +88,7 @@
             this.btn_Borrow.ForeColor = System.Drawing.Color.White;
             this.btn_Borrow.Image = null;
             this.btn_Borrow.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_Borrow.Location = new System.Drawing.Point(384, 396);
+            this.btn_Borrow.Location = new System.Drawing.Point(139, 350);
             this.btn_Borrow.Name = "btn_Borrow";
             this.btn_Borrow.OnHoverBaseColor1 = System.Drawing.Color.Red;
             this.btn_Borrow.OnHoverBaseColor2 = System.Drawing.Color.Red;
@@ -112,7 +114,7 @@
             this.cb_Books.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cb_Books.ForeColor = System.Drawing.Color.White;
             this.cb_Books.FormattingEnabled = true;
-            this.cb_Books.Location = new System.Drawing.Point(327, 209);
+            this.cb_Books.Location = new System.Drawing.Point(82, 163);
             this.cb_Books.Name = "cb_Books";
             this.cb_Books.OnHoverItemBaseColor = System.Drawing.Color.LightSalmon;
             this.cb_Books.OnHoverItemForeColor = System.Drawing.Color.White;
@@ -130,7 +132,7 @@
             this.cb_Borrowers.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cb_Borrowers.ForeColor = System.Drawing.Color.White;
             this.cb_Borrowers.FormattingEnabled = true;
-            this.cb_Borrowers.Location = new System.Drawing.Point(327, 319);
+            this.cb_Borrowers.Location = new System.Drawing.Point(82, 273);
             this.cb_Borrowers.Name = "cb_Borrowers";
             this.cb_Borrowers.OnHoverItemBaseColor = System.Drawing.Color.LightSalmon;
             this.cb_Borrowers.OnHoverItemForeColor = System.Drawing.Color.White;
@@ -144,6 +146,17 @@
             this.notifyIcon1.Text = "notifyIcon1";
             this.notifyIcon1.Visible = true;
             // 
+            // gunaPictureBox1
+            // 
+            this.gunaPictureBox1.BaseColor = System.Drawing.Color.White;
+            this.gunaPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("gunaPictureBox1.Image")));
+            this.gunaPictureBox1.Location = new System.Drawing.Point(384, 91);
+            this.gunaPictureBox1.Name = "gunaPictureBox1";
+            this.gunaPictureBox1.Size = new System.Drawing.Size(494, 380);
+            this.gunaPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.gunaPictureBox1.TabIndex = 16;
+            this.gunaPictureBox1.TabStop = false;
+            // 
             // BorrowForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -156,12 +169,14 @@
             this.Controls.Add(this.btn_Borrow);
             this.Controls.Add(this.cb_Books);
             this.Controls.Add(this.cb_Borrowers);
+            this.Controls.Add(this.gunaPictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "BorrowForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BorrowForm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.BorrowForm_FormClosing);
             this.Load += new System.EventHandler(this.BorrowForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -176,5 +191,6 @@
         private Guna.UI.WinForms.GunaComboBox cb_Books;
         private Guna.UI.WinForms.GunaComboBox cb_Borrowers;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
+        private Guna.UI.WinForms.GunaPictureBox gunaPictureBox1;
     }
 }

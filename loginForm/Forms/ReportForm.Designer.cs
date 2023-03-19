@@ -135,7 +135,7 @@
             this.datagrid_Reports.RowHeadersWidth = 51;
             this.datagrid_Reports.RowTemplate.Height = 24;
             this.datagrid_Reports.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.datagrid_Reports.Size = new System.Drawing.Size(776, 256);
+            this.datagrid_Reports.Size = new System.Drawing.Size(924, 356);
             this.datagrid_Reports.TabIndex = 6;
             this.datagrid_Reports.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
             this.datagrid_Reports.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -174,7 +174,7 @@
             this.btn_show.ForeColor = System.Drawing.Color.White;
             this.btn_show.Image = null;
             this.btn_show.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_show.Location = new System.Drawing.Point(628, 134);
+            this.btn_show.Location = new System.Drawing.Point(776, 134);
             this.btn_show.Name = "btn_show";
             this.btn_show.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(24)))), ((int)(((byte)(83)))));
             this.btn_show.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(24)))), ((int)(((byte)(83)))));
@@ -215,8 +215,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(48)))), ((int)(((byte)(76)))));
+            this.ClientSize = new System.Drawing.Size(948, 550);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_show);

@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BorrowerForm));
             this.txt_BorrowerID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -43,16 +44,17 @@
             this.btn_UpdateBorrower = new Guna.UI.WinForms.GunaGradientButton();
             this.btn_EditBorrower = new Guna.UI.WinForms.GunaGradientButton();
             this.btn_AddBorrower = new Guna.UI.WinForms.GunaGradientButton();
-            this.btn_Close = new Guna.UI.WinForms.GunaGradientButton();
+            this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.datagrid_Borrower)).BeginInit();
             this.gunaPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // txt_BorrowerID
             // 
-            this.txt_BorrowerID.Location = new System.Drawing.Point(731, 262);
+            this.txt_BorrowerID.Location = new System.Drawing.Point(784, 262);
             this.txt_BorrowerID.Name = "txt_BorrowerID";
-            this.txt_BorrowerID.Size = new System.Drawing.Size(100, 22);
+            this.txt_BorrowerID.Size = new System.Drawing.Size(131, 22);
             this.txt_BorrowerID.TabIndex = 0;
             this.txt_BorrowerID.Visible = false;
             // 
@@ -151,32 +153,32 @@
             this.datagrid_Borrower.AllowUserToDeleteRows = false;
             this.datagrid_Borrower.AllowUserToResizeColumns = false;
             this.datagrid_Borrower.AllowUserToResizeRows = false;
-            dataGridViewCellStyle25.BackColor = System.Drawing.Color.White;
-            this.datagrid_Borrower.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.datagrid_Borrower.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.datagrid_Borrower.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.datagrid_Borrower.BackgroundColor = System.Drawing.Color.White;
             this.datagrid_Borrower.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.datagrid_Borrower.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.datagrid_Borrower.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
             this.datagrid_Borrower.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle26.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle26.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datagrid_Borrower.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle26;
-            this.datagrid_Borrower.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datagrid_Borrower.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.datagrid_Borrower.ColumnHeadersHeight = 28;
             this.datagrid_Borrower.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle27.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle27.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.datagrid_Borrower.DefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.datagrid_Borrower.DefaultCellStyle = dataGridViewCellStyle6;
             this.datagrid_Borrower.EnableHeadersVisualStyles = false;
             this.datagrid_Borrower.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.datagrid_Borrower.Location = new System.Drawing.Point(12, 290);
@@ -186,7 +188,7 @@
             this.datagrid_Borrower.RowHeadersWidth = 51;
             this.datagrid_Borrower.RowTemplate.Height = 24;
             this.datagrid_Borrower.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.datagrid_Borrower.Size = new System.Drawing.Size(819, 269);
+            this.datagrid_Borrower.Size = new System.Drawing.Size(903, 334);
             this.datagrid_Borrower.TabIndex = 7;
             this.datagrid_Borrower.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
             this.datagrid_Borrower.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -200,8 +202,8 @@
             this.datagrid_Borrower.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.datagrid_Borrower.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             this.datagrid_Borrower.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.datagrid_Borrower.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.datagrid_Borrower.ThemeStyle.HeaderStyle.Height = 4;
+            this.datagrid_Borrower.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.datagrid_Borrower.ThemeStyle.HeaderStyle.Height = 28;
             this.datagrid_Borrower.ThemeStyle.ReadOnly = true;
             this.datagrid_Borrower.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.datagrid_Borrower.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -313,42 +315,24 @@
             this.btn_AddBorrower.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btn_AddBorrower.Click += new System.EventHandler(this.btn_AddBorrower_Click);
             // 
-            // btn_Close
+            // gunaPictureBox1
             // 
-            this.btn_Close.AnimationHoverSpeed = 0.07F;
-            this.btn_Close.AnimationSpeed = 0.03F;
-            this.btn_Close.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Close.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(25)))), ((int)(((byte)(64)))));
-            this.btn_Close.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(25)))), ((int)(((byte)(64)))));
-            this.btn_Close.BorderColor = System.Drawing.Color.Black;
-            this.btn_Close.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_Close.FocusedColor = System.Drawing.Color.Empty;
-            this.btn_Close.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Close.ForeColor = System.Drawing.Color.White;
-            this.btn_Close.Image = null;
-            this.btn_Close.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_Close.Location = new System.Drawing.Point(671, 12);
-            this.btn_Close.Name = "btn_Close";
-            this.btn_Close.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(24)))), ((int)(((byte)(83)))));
-            this.btn_Close.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(24)))), ((int)(((byte)(83)))));
-            this.btn_Close.OnHoverBorderColor = System.Drawing.Color.Red;
-            this.btn_Close.OnHoverForeColor = System.Drawing.Color.White;
-            this.btn_Close.OnHoverImage = null;
-            this.btn_Close.OnPressedColor = System.Drawing.Color.Black;
-            this.btn_Close.Radius = 8;
-            this.btn_Close.Size = new System.Drawing.Size(160, 42);
-            this.btn_Close.TabIndex = 16;
-            this.btn_Close.Text = "Exit";
-            this.btn_Close.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btn_Close.Click += new System.EventHandler(this.btn_Close_Click);
+            this.gunaPictureBox1.BaseColor = System.Drawing.Color.White;
+            this.gunaPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("gunaPictureBox1.Image")));
+            this.gunaPictureBox1.Location = new System.Drawing.Point(638, 24);
+            this.gunaPictureBox1.Name = "gunaPictureBox1";
+            this.gunaPictureBox1.Size = new System.Drawing.Size(255, 158);
+            this.gunaPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.gunaPictureBox1.TabIndex = 16;
+            this.gunaPictureBox1.TabStop = false;
             // 
             // BorrowerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(48)))), ((int)(((byte)(76)))));
-            this.ClientSize = new System.Drawing.Size(843, 571);
-            this.Controls.Add(this.btn_Close);
+            this.ClientSize = new System.Drawing.Size(927, 636);
+            this.Controls.Add(this.gunaPictureBox1);
             this.Controls.Add(this.gunaPanel1);
             this.Controls.Add(this.datagrid_Borrower);
             this.Controls.Add(this.label3);
@@ -363,6 +347,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.datagrid_Borrower)).EndInit();
             this.gunaPanel1.ResumeLayout(false);
             this.gunaPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -381,6 +366,6 @@
         private Guna.UI.WinForms.GunaGradientButton btn_UpdateBorrower;
         private Guna.UI.WinForms.GunaGradientButton btn_EditBorrower;
         private Guna.UI.WinForms.GunaGradientButton btn_AddBorrower;
-        private Guna.UI.WinForms.GunaGradientButton btn_Close;
+        private Guna.UI.WinForms.GunaPictureBox gunaPictureBox1;
     }
 }

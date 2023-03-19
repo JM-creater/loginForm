@@ -29,12 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Guna.UI.Animation.Animation animation2 = new Guna.UI.Animation.Animation();
+            Guna.UI.Animation.Animation animation15 = new Guna.UI.Animation.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.gunaControlBox1 = new Guna.UI.WinForms.GunaControlBox();
             this.gunaDragControl1 = new Guna.UI.WinForms.GunaDragControl(this.components);
-            this.btn_hide = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
             this.gunaBtn_Dashboard = new Guna.UI.WinForms.GunaGradientButton();
             this.gunaGradientButton4 = new Guna.UI.WinForms.GunaGradientButton();
@@ -45,15 +44,12 @@
             this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
             this.gunaGradientButton7 = new Guna.UI.WinForms.GunaGradientButton();
             this.gunaGradientButton1 = new Guna.UI.WinForms.GunaGradientButton();
-            this.btn_show = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.gunaTransition1 = new Guna.UI.WinForms.GunaTransition(this.components);
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage = new System.Windows.Forms.TabPage();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_hide)).BeginInit();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
             this.gunaPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_show)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -82,21 +78,6 @@
             // gunaDragControl1
             // 
             this.gunaDragControl1.TargetControl = this;
-            // 
-            // btn_hide
-            // 
-            this.btn_hide.BackColor = System.Drawing.Color.Transparent;
-            this.btn_hide.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(48)))), ((int)(((byte)(76)))));
-            this.gunaTransition1.SetDecoration(this.btn_hide, Guna.UI.Animation.DecorationType.None);
-            this.btn_hide.Image = ((System.Drawing.Image)(resources.GetObject("btn_hide.Image")));
-            this.btn_hide.Location = new System.Drawing.Point(204, 383);
-            this.btn_hide.Name = "btn_hide";
-            this.btn_hide.Size = new System.Drawing.Size(35, 35);
-            this.btn_hide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btn_hide.TabIndex = 2;
-            this.btn_hide.TabStop = false;
-            this.btn_hide.UseTransfarantBackground = true;
-            this.btn_hide.Click += new System.EventHandler(this.btn_hide_Click);
             // 
             // gunaPictureBox1
             // 
@@ -333,42 +314,26 @@
             this.gunaGradientButton1.TextOffsetX = 25;
             this.gunaGradientButton1.Click += new System.EventHandler(this.gunaGradientButton1_Click);
             // 
-            // btn_show
-            // 
-            this.btn_show.BackColor = System.Drawing.Color.Transparent;
-            this.btn_show.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(48)))), ((int)(((byte)(76)))));
-            this.gunaTransition1.SetDecoration(this.btn_show, Guna.UI.Animation.DecorationType.None);
-            this.btn_show.Image = ((System.Drawing.Image)(resources.GetObject("btn_show.Image")));
-            this.btn_show.Location = new System.Drawing.Point(40, 383);
-            this.btn_show.Name = "btn_show";
-            this.btn_show.Size = new System.Drawing.Size(35, 35);
-            this.btn_show.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btn_show.TabIndex = 3;
-            this.btn_show.TabStop = false;
-            this.btn_show.UseTransfarantBackground = true;
-            this.btn_show.Visible = false;
-            this.btn_show.Click += new System.EventHandler(this.btn_show_Click);
-            // 
             // gunaTransition1
             // 
             this.gunaTransition1.AnimationType = Guna.UI.Animation.AnimationType.Transparent;
             this.gunaTransition1.Cursor = null;
-            animation2.AnimateOnlyDifferences = true;
-            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
-            animation2.LeafCoeff = 0F;
-            animation2.MaxTime = 1F;
-            animation2.MinTime = 0F;
-            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
-            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
-            animation2.MosaicSize = 0;
-            animation2.Padding = new System.Windows.Forms.Padding(0);
-            animation2.RotateCoeff = 0F;
-            animation2.RotateLimit = 0F;
-            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
-            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
-            animation2.TimeCoeff = 0F;
-            animation2.TransparencyCoeff = 1F;
-            this.gunaTransition1.DefaultAnimation = animation2;
+            animation15.AnimateOnlyDifferences = true;
+            animation15.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation15.BlindCoeff")));
+            animation15.LeafCoeff = 0F;
+            animation15.MaxTime = 1F;
+            animation15.MinTime = 0F;
+            animation15.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation15.MosaicCoeff")));
+            animation15.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation15.MosaicShift")));
+            animation15.MosaicSize = 0;
+            animation15.Padding = new System.Windows.Forms.Padding(0);
+            animation15.RotateCoeff = 0F;
+            animation15.RotateLimit = 0F;
+            animation15.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation15.ScaleCoeff")));
+            animation15.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation15.SlideCoeff")));
+            animation15.TimeCoeff = 0F;
+            animation15.TransparencyCoeff = 1F;
+            this.gunaTransition1.DefaultAnimation = animation15;
             // 
             // tabControl1
             // 
@@ -383,17 +348,6 @@
             this.tabControl1.Size = new System.Drawing.Size(996, 636);
             this.tabControl1.TabIndex = 4;
             // 
-            // tabPage2
-            // 
-            this.gunaTransition1.SetDecoration(this.tabPage2, Guna.UI.Animation.DecorationType.None);
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(716, 520);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
             // tabPage
             // 
             this.tabPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
@@ -405,6 +359,17 @@
             this.tabPage.TabIndex = 0;
             this.tabPage.Text = "tabPage1";
             // 
+            // tabPage2
+            // 
+            this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            this.gunaTransition1.SetDecoration(this.tabPage2, Guna.UI.Animation.DecorationType.None);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(988, 607);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "tabPage2";
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -412,8 +377,6 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(48)))), ((int)(((byte)(76)))));
             this.ClientSize = new System.Drawing.Size(1213, 636);
             this.Controls.Add(this.tabControl1);
-            this.Controls.Add(this.btn_show);
-            this.Controls.Add(this.btn_hide);
             this.Controls.Add(this.gunaControlBox1);
             this.Controls.Add(this.gunaPanel1);
             this.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -424,10 +387,8 @@
             this.Text = "Menu";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Menu_FormClosing);
             this.Load += new System.EventHandler(this.Menu_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.btn_hide)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).EndInit();
             this.gunaPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.btn_show)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -438,8 +399,6 @@
         private Guna.UI.WinForms.GunaElipse gunaElipse1;
         private Guna.UI.WinForms.GunaControlBox gunaControlBox1;
         private Guna.UI.WinForms.GunaDragControl gunaDragControl1;
-        private Guna.UI.WinForms.GunaCirclePictureBox btn_hide;
-        private Guna.UI.WinForms.GunaCirclePictureBox btn_show;
         private Guna.UI.WinForms.GunaTransition gunaTransition1;
         private Guna.UI.WinForms.GunaPanel gunaPanel1;
         private Guna.UI.WinForms.GunaSeparator gunaSeparator1;

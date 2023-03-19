@@ -84,7 +84,7 @@
             this.gunaUser.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.gunaUser.FocusedBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(48)))), ((int)(((byte)(76)))));
             this.gunaUser.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(25)))), ((int)(((byte)(64)))));
-            this.gunaUser.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.gunaUser.FocusedForeColor = System.Drawing.Color.White;
             this.gunaUser.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaUser.ForeColor = System.Drawing.Color.White;
             this.gunaUser.Location = new System.Drawing.Point(70, 292);
@@ -93,7 +93,7 @@
             this.gunaUser.Radius = 8;
             this.gunaUser.SelectedText = "";
             this.gunaUser.Size = new System.Drawing.Size(271, 46);
-            this.gunaUser.TabIndex = 6;
+            this.gunaUser.TabIndex = 1;
             // 
             // gunaPass
             // 
@@ -103,16 +103,16 @@
             this.gunaPass.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.gunaPass.FocusedBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(48)))), ((int)(((byte)(76)))));
             this.gunaPass.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(25)))), ((int)(((byte)(64)))));
-            this.gunaPass.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.gunaPass.FocusedForeColor = System.Drawing.Color.White;
             this.gunaPass.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaPass.ForeColor = System.Drawing.Color.Silver;
+            this.gunaPass.ForeColor = System.Drawing.Color.White;
             this.gunaPass.Location = new System.Drawing.Point(70, 357);
             this.gunaPass.Name = "gunaPass";
             this.gunaPass.PasswordChar = '\0';
             this.gunaPass.Radius = 8;
             this.gunaPass.SelectedText = "";
             this.gunaPass.Size = new System.Drawing.Size(271, 46);
-            this.gunaPass.TabIndex = 6;
+            this.gunaPass.TabIndex = 2;
             // 
             // gunaEnter
             // 
@@ -136,7 +136,7 @@
             this.gunaEnter.OnPressedColor = System.Drawing.Color.Black;
             this.gunaEnter.Radius = 15;
             this.gunaEnter.Size = new System.Drawing.Size(216, 45);
-            this.gunaEnter.TabIndex = 7;
+            this.gunaEnter.TabIndex = 3;
             this.gunaEnter.Text = "Enter";
             this.gunaEnter.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.gunaEnter.Click += new System.EventHandler(this.gunaEnter_Click);

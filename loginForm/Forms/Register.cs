@@ -66,6 +66,7 @@ namespace loginForm
                 txt_pass.Clear();
                 txt_conpass.Clear();
                 txt_user.Focus();
+
                 loadingScreenForm loadingScreenForm = new loadingScreenForm();
                 loadingScreenForm.Show();
                 this.Hide();

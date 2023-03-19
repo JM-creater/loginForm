@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BookForm));
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -43,14 +44,15 @@
             this.numeric_BookQty = new Guna.UI.WinForms.GunaNumeric();
             this.txt_SearchBox = new Guna.UI.WinForms.GunaTextBox();
             this.btn_DeleteBook = new Guna.UI.WinForms.GunaGradientButton();
-            this.btn_ex = new Guna.UI.WinForms.GunaGradientButton();
             this.btn_EditBook = new Guna.UI.WinForms.GunaGradientButton();
             this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
             this.label3 = new System.Windows.Forms.Label();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.datagrid_Book = new Guna.UI.WinForms.GunaDataGridView();
+            this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
             this.gunaPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datagrid_Book)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -77,7 +79,7 @@
             // 
             // txt_BookID
             // 
-            this.txt_BookID.Location = new System.Drawing.Point(770, 246);
+            this.txt_BookID.Location = new System.Drawing.Point(859, 246);
             this.txt_BookID.Name = "txt_BookID";
             this.txt_BookID.Size = new System.Drawing.Size(125, 22);
             this.txt_BookID.TabIndex = 6;
@@ -114,7 +116,7 @@
             // 
             // gunaElipse1
             // 
-            this.gunaElipse1.Radius = 15;
+            this.gunaElipse1.Radius = 0;
             this.gunaElipse1.TargetControl = this;
             // 
             // txt_BookTitle
@@ -182,7 +184,7 @@
             this.txt_SearchBox.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txt_SearchBox.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txt_SearchBox.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txt_SearchBox.Location = new System.Drawing.Point(12, 228);
+            this.txt_SearchBox.Location = new System.Drawing.Point(8, 221);
             this.txt_SearchBox.Name = "txt_SearchBox";
             this.txt_SearchBox.PasswordChar = '\0';
             this.txt_SearchBox.Radius = 8;
@@ -220,35 +222,6 @@
             this.btn_DeleteBook.Text = "Delete";
             this.btn_DeleteBook.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btn_DeleteBook.Click += new System.EventHandler(this.btn_DeleteBook_Click);
-            // 
-            // btn_ex
-            // 
-            this.btn_ex.AnimationHoverSpeed = 0.07F;
-            this.btn_ex.AnimationSpeed = 0.03F;
-            this.btn_ex.BackColor = System.Drawing.Color.Transparent;
-            this.btn_ex.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(25)))), ((int)(((byte)(64)))));
-            this.btn_ex.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(25)))), ((int)(((byte)(64)))));
-            this.btn_ex.BorderColor = System.Drawing.Color.Black;
-            this.btn_ex.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_ex.FocusedColor = System.Drawing.Color.Empty;
-            this.btn_ex.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ex.ForeColor = System.Drawing.Color.White;
-            this.btn_ex.Image = null;
-            this.btn_ex.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_ex.Location = new System.Drawing.Point(12, 12);
-            this.btn_ex.Name = "btn_ex";
-            this.btn_ex.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(24)))), ((int)(((byte)(83)))));
-            this.btn_ex.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(24)))), ((int)(((byte)(83)))));
-            this.btn_ex.OnHoverBorderColor = System.Drawing.Color.Red;
-            this.btn_ex.OnHoverForeColor = System.Drawing.Color.White;
-            this.btn_ex.OnHoverImage = null;
-            this.btn_ex.OnPressedColor = System.Drawing.Color.Black;
-            this.btn_ex.Radius = 8;
-            this.btn_ex.Size = new System.Drawing.Size(160, 42);
-            this.btn_ex.TabIndex = 12;
-            this.btn_ex.Text = "Exit";
-            this.btn_ex.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btn_ex.Click += new System.EventHandler(this.btn_ex_Click);
             // 
             // btn_EditBook
             // 
@@ -289,7 +262,7 @@
             this.gunaPanel1.Controls.Add(this.btn_AddBook);
             this.gunaPanel1.Controls.Add(this.txt_BookAuthor);
             this.gunaPanel1.Controls.Add(this.numeric_BookQty);
-            this.gunaPanel1.Location = new System.Drawing.Point(339, 12);
+            this.gunaPanel1.Location = new System.Drawing.Point(420, 12);
             this.gunaPanel1.Name = "gunaPanel1";
             this.gunaPanel1.Size = new System.Drawing.Size(556, 228);
             this.gunaPanel1.TabIndex = 13;
@@ -299,7 +272,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(12, 202);
+            this.label3.Location = new System.Drawing.Point(12, 198);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(67, 20);
             this.label3.TabIndex = 13;
@@ -316,40 +289,40 @@
             this.datagrid_Book.AllowUserToDeleteRows = false;
             this.datagrid_Book.AllowUserToResizeColumns = false;
             this.datagrid_Book.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.datagrid_Book.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.datagrid_Book.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.datagrid_Book.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.datagrid_Book.BackgroundColor = System.Drawing.Color.White;
             this.datagrid_Book.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.datagrid_Book.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.datagrid_Book.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datagrid_Book.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.datagrid_Book.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datagrid_Book.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.datagrid_Book.ColumnHeadersHeight = 28;
             this.datagrid_Book.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.datagrid_Book.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.datagrid_Book.DefaultCellStyle = dataGridViewCellStyle6;
             this.datagrid_Book.EnableHeadersVisualStyles = false;
             this.datagrid_Book.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.datagrid_Book.Location = new System.Drawing.Point(16, 274);
+            this.datagrid_Book.Location = new System.Drawing.Point(8, 274);
             this.datagrid_Book.Name = "datagrid_Book";
             this.datagrid_Book.RowHeadersVisible = false;
             this.datagrid_Book.RowHeadersWidth = 51;
             this.datagrid_Book.RowTemplate.Height = 24;
             this.datagrid_Book.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.datagrid_Book.Size = new System.Drawing.Size(879, 297);
+            this.datagrid_Book.Size = new System.Drawing.Size(976, 350);
             this.datagrid_Book.TabIndex = 14;
             this.datagrid_Book.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
             this.datagrid_Book.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -363,8 +336,8 @@
             this.datagrid_Book.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.datagrid_Book.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             this.datagrid_Book.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.datagrid_Book.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.datagrid_Book.ThemeStyle.HeaderStyle.Height = 4;
+            this.datagrid_Book.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.datagrid_Book.ThemeStyle.HeaderStyle.Height = 28;
             this.datagrid_Book.ThemeStyle.ReadOnly = false;
             this.datagrid_Book.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.datagrid_Book.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -375,15 +348,26 @@
             this.datagrid_Book.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.datagrid_Book.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagrid_Book_CellContentClick);
             // 
+            // gunaPictureBox1
+            // 
+            this.gunaPictureBox1.BaseColor = System.Drawing.Color.White;
+            this.gunaPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("gunaPictureBox1.Image")));
+            this.gunaPictureBox1.Location = new System.Drawing.Point(76, 12);
+            this.gunaPictureBox1.Name = "gunaPictureBox1";
+            this.gunaPictureBox1.Size = new System.Drawing.Size(255, 158);
+            this.gunaPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.gunaPictureBox1.TabIndex = 15;
+            this.gunaPictureBox1.TabStop = false;
+            // 
             // BookForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(48)))), ((int)(((byte)(76)))));
-            this.ClientSize = new System.Drawing.Size(907, 583);
+            this.ClientSize = new System.Drawing.Size(996, 636);
+            this.Controls.Add(this.gunaPictureBox1);
             this.Controls.Add(this.datagrid_Book);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.btn_ex);
             this.Controls.Add(this.gunaPanel1);
             this.Controls.Add(this.txt_BookID);
             this.Controls.Add(this.txt_SearchBox);
@@ -395,6 +379,7 @@
             this.gunaPanel1.ResumeLayout(false);
             this.gunaPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datagrid_Book)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -412,11 +397,11 @@
         private Guna.UI.WinForms.GunaTextBox txt_SearchBox;
         private Guna.UI.WinForms.GunaNumeric numeric_BookQty;
         private Guna.UI.WinForms.GunaGradientButton btn_EditBook;
-        private Guna.UI.WinForms.GunaGradientButton btn_ex;
         private Guna.UI.WinForms.GunaGradientButton btn_DeleteBook;
         private Guna.UI.WinForms.GunaPanel gunaPanel1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
         private Guna.UI.WinForms.GunaDataGridView datagrid_Book;
+        private Guna.UI.WinForms.GunaPictureBox gunaPictureBox1;
     }
 }

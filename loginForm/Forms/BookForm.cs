@@ -18,11 +18,6 @@ namespace loginForm
             InitializeComponent();
         }
 
-        private void btnEx_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void btn_AddBook_Click(object sender, EventArgs e)
         {
             if (txt_BookTitle.Text != "" && txt_BookAuthor.Text != "" && numeric_BookQty.Value != 0)
@@ -139,10 +134,6 @@ namespace loginForm
             }
         }
 
-        private void btn_ex_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
 
         private void txt_SearchBox_Click(object sender, EventArgs e)
         {

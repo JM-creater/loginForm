@@ -125,11 +125,6 @@ namespace loginForm
             txt_Lastname.Text = datagrid_Borrower.Rows[e.RowIndex].Cells["Last Name"].Value.ToString();
         }
 
-        private void btn_Close_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void txt_FnameSearch_Click(object sender, EventArgs e)
         {
             if (txt_FnameSearch.Text != "")
