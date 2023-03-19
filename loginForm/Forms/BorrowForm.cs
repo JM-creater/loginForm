@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Util;
 using System.Windows.Forms;
 
 namespace loginForm.Forms
@@ -29,14 +30,19 @@ namespace loginForm.Forms
                     Book.Update(dtt.Rows[0]["Book_ID"].ToString(), dtt.Rows[0]["Book_Title"].ToString(), dtt.Rows[0]["Book_Author"].ToString(), int.Parse(dtt.Rows[0]["Book_Quantity"].ToString()) - 1);
                     Transaction.Create(cb_Books.SelectedValue.ToString(), cb_Borrowers.SelectedValue.ToString(), DateTime.Now);
                     notifyIcon1.BalloonTipText = "You've Successfully Borrowed A Book";
+                    notifyIcon1.ShowBalloonTip(100);
+                    notifyIcon1.Dispose();
                     fillComboBox();
                 }
             }
             catch (Exception)
             {
 
-                Menu menu = new Menu();
+                Menu menu = new Menu();;
                 notifyIcon1.BalloonTipText = "No Available Books";
+                notifyIcon1.ShowBalloonTip(100);
+                notifyIcon1.Dispose();
+                fillComboBox();
             }
         }
 
@@ -60,8 +66,8 @@ namespace loginForm.Forms
 
         private void BorrowForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            BorrowForm borrow = new BorrowForm();
-            borrow.Close();
+            BorrowForm borrowForm = new BorrowForm();
+            borrowForm.Close();
         }
     }
 }
