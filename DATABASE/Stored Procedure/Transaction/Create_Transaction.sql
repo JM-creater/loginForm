@@ -15,3 +15,5 @@ AS
 		, @Transaction_Borrower_ID
 		, @Transaction_Borrowed_Date
 	)
+
+	

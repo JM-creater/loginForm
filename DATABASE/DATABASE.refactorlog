@@ -77,4 +77,18 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="User_ID" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="96674c77-6124-4e90-b88d-865a89ed10b2" ChangeDateTime="03/19/2023 00:35:40">
+    <Property Name="ElementName" Value="[dbo].[Table_Transaction].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Table_Transaction]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Transaction_ID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="1372cbaa-ce4f-4430-9674-43a11b6bd5ae" ChangeDateTime="03/19/2023 00:36:37">
+    <Property Name="ElementName" Value="[dbo].[Table_Transaction].[Transaction_]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Table_Transaction]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Transaction_Borrowed_Date" />
+  </Operation>
 </Operations>

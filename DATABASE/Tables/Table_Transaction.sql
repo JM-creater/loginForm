@@ -5,5 +5,5 @@
     [Transaction_Borrower_ID] INT NULL, 
     [Transaction_IsReturned] BIT NULL DEFAULT 0, 
     [Transaction_Borrowed_Date] DATETIME NULL, 
-    [Transaction_Returned_Date] NCHAR(10) NULL
+    [Transaction_Returned_Date] DATETIME NULL
 )

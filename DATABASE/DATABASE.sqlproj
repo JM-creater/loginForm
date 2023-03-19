@@ -67,7 +67,6 @@
     <Build Include="Tables\table_user.sql" />
     <Build Include="Tables\Table_Book.sql" />
     <Build Include="Tables\Table_Borrower.sql" />
-    <Build Include="Tables\Table_Transaction.sql" />
     <Build Include="Stored Procedure\Users\Create_User.sql" />
     <Build Include="Stored Procedure\Users\LogIn_User.sql" />
     <Build Include="Stored Procedure\Users\Read_User.sql" />
@@ -88,6 +87,7 @@
     <Build Include="Stored Procedure\Transaction\ReadByBooks_Transaction.sql" />
     <Build Include="Stored Procedure\Transaction\ReadByBorrowers_Transaction.sql" />
     <Build Include="Stored Procedure\Transaction\Update_Transaction.sql" />
+    <Build Include="Tables\Table_Transaction.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="DATABASE.refactorlog" />
