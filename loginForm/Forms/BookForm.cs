@@ -23,7 +23,11 @@ namespace loginForm
             if (txt_BookTitle.Text != "" && txt_BookAuthor.Text != "" && numeric_BookQty.Value != 0)
             {
                 Book.Create(txt_BookTitle.Text, txt_BookAuthor.Text, ((int)numeric_BookQty.Value));
-                MessageBox.Show("You've Successfully Added Book", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                notifyIcon1.BalloonTipTitle = "Information";
+                notifyIcon1.BalloonTipText = "You've Successfully Added Book";
+                notifyIcon1.ShowBalloonTip(100);
+                notifyIcon1.Dispose();
+
                 txt_BookTitle.Clear();
                 txt_BookAuthor.Clear();
                 txt_BookTitle.Focus();
@@ -33,19 +37,31 @@ namespace loginForm
 
             else if (txt_BookTitle.Text != "" && txt_BookAuthor.Text == "" && numeric_BookQty.Value != 0)
             {
-                MessageBox.Show("Please Input the Book Author", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                notifyIcon2.BalloonTipTitle = "Error";
+                notifyIcon2.BalloonTipText = "Please Input the Book Author";
+                notifyIcon2.ShowBalloonTip(100);
+                notifyIcon2.Dispose();
             }
             else if (txt_BookTitle.Text == "" && txt_BookAuthor.Text != "" && numeric_BookQty.Value != 0)
             {
-                MessageBox.Show("Please Input the Book Title", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                notifyIcon2.BalloonTipTitle = "Error";
+                notifyIcon2.BalloonTipText = "Please Input the Book Title";
+                notifyIcon2.ShowBalloonTip(100);
+                notifyIcon2.Dispose();
             }
             else if (txt_BookTitle.Text != "" && txt_BookAuthor.Text != "" && numeric_BookQty.Value == 0)
             {
-                MessageBox.Show("Please Input the Book Quantity", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                notifyIcon2.BalloonTipTitle = "Error";
+                notifyIcon2.BalloonTipText = "Please Input the Book Quantity";
+                notifyIcon2.ShowBalloonTip(100);
+                notifyIcon2.Dispose();
             }
             else
             {
-                MessageBox.Show("Please Input the Book Title, Book Author and Book Quantity", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                notifyIcon2.BalloonTipTitle = "Error";
+                notifyIcon2.BalloonTipText = "Please Input the Book Title, Book Author and Book Quantity";
+                notifyIcon2.ShowBalloonTip(100);
+                notifyIcon2.Dispose();
             }
         }
 
@@ -103,12 +119,18 @@ namespace loginForm
                     txt_BookTitle.Focus();
                     numeric_BookQty.Value = 0;
                     loadData();
-                    MessageBox.Show("You've successfully Edited Book", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    notifyIcon1.BalloonTipTitle = "Information";
+                    notifyIcon1.BalloonTipText = "You've successfully Edited Book";
+                    notifyIcon1.ShowBalloonTip(100);
+                    notifyIcon1.Dispose();
                 }
             }
             else
             {
-                MessageBox.Show("Please Select Book that you want to Edit", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                notifyIcon2.BalloonTipTitle = "Error";
+                notifyIcon2.BalloonTipText = "Please Select Book that you want to Edit";
+                notifyIcon2.ShowBalloonTip(100);
+                notifyIcon2.Dispose();
             }
         }
 
@@ -125,12 +147,18 @@ namespace loginForm
                     txt_BookAuthor.Clear();
                     txt_BookTitle.Focus();
                     loadData();
-                    MessageBox.Show("You've successfully Delete Book", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    notifyIcon1.BalloonTipTitle = "Information";
+                    notifyIcon1.BalloonTipText = "You've successfully Delete Book";
+                    notifyIcon1.ShowBalloonTip(100);
+                    notifyIcon1.Dispose();
                 }
             }
             else
             {
-                MessageBox.Show("Please Select Book that you want to delete", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                notifyIcon2.BalloonTipTitle = "Error";
+                notifyIcon2.BalloonTipText = "Please Select Book that you want to delete";
+                notifyIcon2.ShowBalloonTip(100);
+                notifyIcon2.Dispose();
             }
         }
 

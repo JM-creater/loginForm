@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.DTP_start = new Guna.UI.WinForms.GunaDateTimePicker();
             this.DTP_end = new Guna.UI.WinForms.GunaDateTimePicker();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
@@ -50,7 +50,7 @@
             this.DTP_start.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.DTP_start.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.DTP_start.ForeColor = System.Drawing.Color.Black;
-            this.DTP_start.Location = new System.Drawing.Point(333, 109);
+            this.DTP_start.Location = new System.Drawing.Point(52, 109);
             this.DTP_start.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.DTP_start.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.DTP_start.Name = "DTP_start";
@@ -72,7 +72,7 @@
             this.DTP_end.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.DTP_end.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.DTP_end.ForeColor = System.Drawing.Color.Black;
-            this.DTP_end.Location = new System.Drawing.Point(52, 109);
+            this.DTP_end.Location = new System.Drawing.Point(333, 109);
             this.DTP_end.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.DTP_end.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.DTP_end.Name = "DTP_end";
@@ -92,9 +92,9 @@
             this.gunaLabel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.gunaLabel1.Location = new System.Drawing.Point(2, 9);
             this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(411, 60);
+            this.gunaLabel1.Size = new System.Drawing.Size(406, 60);
             this.gunaLabel1.TabIndex = 5;
-            this.gunaLabel1.Text = "RETURN BOOKS";
+            this.gunaLabel1.Text = "REPORT BOOKS";
             // 
             // datagrid_Reports
             // 
@@ -102,30 +102,30 @@
             this.datagrid_Reports.AllowUserToDeleteRows = false;
             this.datagrid_Reports.AllowUserToResizeColumns = false;
             this.datagrid_Reports.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.datagrid_Reports.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.datagrid_Reports.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.datagrid_Reports.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.datagrid_Reports.BackgroundColor = System.Drawing.Color.White;
             this.datagrid_Reports.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.datagrid_Reports.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.datagrid_Reports.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.datagrid_Reports.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datagrid_Reports.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.datagrid_Reports.ColumnHeadersHeight = 28;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.datagrid_Reports.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.datagrid_Reports.DefaultCellStyle = dataGridViewCellStyle6;
             this.datagrid_Reports.EnableHeadersVisualStyles = false;
             this.datagrid_Reports.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.datagrid_Reports.Location = new System.Drawing.Point(12, 182);

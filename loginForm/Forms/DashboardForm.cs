@@ -1,7 +1,9 @@
-﻿using System;
+﻿using login.form;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,6 +17,31 @@ namespace loginForm.Forms
         public DashboardForm()
         {
             InitializeComponent();
+            countBooks();
+            countBorrower();
         }
+
+        SqlConnection con = new SqlConnection(Database.ConnectionString);
+
+        private void countBooks()
+        {
+            con.Open();
+            SqlDataAdapter sda = new SqlDataAdapter("Select Count(*) from Table_Book", con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            bookLbl.Text = dt.Rows[0][0].ToString();
+            con.Close();
+        }
+
+        private void countBorrower()
+        {
+            con.Open();
+            SqlDataAdapter sda = new SqlDataAdapter("Select Count(*) from Table_Borrower", con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            lblBorrower.Text = dt.Rows[0][0].ToString();
+            con.Close();
+        }
+
     }
 }

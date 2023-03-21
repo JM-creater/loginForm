@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Guna.UI.Animation.Animation animation15 = new Guna.UI.Animation.Animation();
+            Guna.UI.Animation.Animation animation1 = new Guna.UI.Animation.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.gunaControlBox1 = new Guna.UI.WinForms.GunaControlBox();
@@ -117,6 +117,7 @@
             this.gunaBtn_Dashboard.TabIndex = 1;
             this.gunaBtn_Dashboard.Text = "Dashboard";
             this.gunaBtn_Dashboard.TextOffsetX = 25;
+            this.gunaBtn_Dashboard.Click += new System.EventHandler(this.gunaBtn_Dashboard_Click);
             // 
             // gunaGradientButton4
             // 
@@ -318,22 +319,22 @@
             // 
             this.gunaTransition1.AnimationType = Guna.UI.Animation.AnimationType.Transparent;
             this.gunaTransition1.Cursor = null;
-            animation15.AnimateOnlyDifferences = true;
-            animation15.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation15.BlindCoeff")));
-            animation15.LeafCoeff = 0F;
-            animation15.MaxTime = 1F;
-            animation15.MinTime = 0F;
-            animation15.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation15.MosaicCoeff")));
-            animation15.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation15.MosaicShift")));
-            animation15.MosaicSize = 0;
-            animation15.Padding = new System.Windows.Forms.Padding(0);
-            animation15.RotateCoeff = 0F;
-            animation15.RotateLimit = 0F;
-            animation15.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation15.ScaleCoeff")));
-            animation15.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation15.SlideCoeff")));
-            animation15.TimeCoeff = 0F;
-            animation15.TransparencyCoeff = 1F;
-            this.gunaTransition1.DefaultAnimation = animation15;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 1F;
+            this.gunaTransition1.DefaultAnimation = animation1;
             // 
             // tabControl1
             // 

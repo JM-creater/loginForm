@@ -104,5 +104,11 @@ namespace loginForm
             ReturnForm bk = new ReturnForm();
             AddNewTab(bk);
         }
+
+        private void gunaBtn_Dashboard_Click(object sender, EventArgs e)
+        {
+            DashboardForm dashboardForm = new DashboardForm();
+            AddNewTab(dashboardForm);
+        }
     }
 }
