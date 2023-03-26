@@ -53,7 +53,7 @@ namespace loginForm
         {
             var acc = User.Read(txt_user.Text);
 
-            if (txt_user.Text != "" && txt_pass.Text == txt_conpass.Text && acc == null && IsValidPass(txt_pass.Text)
+            if (txt_user.Text != "" && txt_pass.Text == txt_conpass.Text && acc == null && IsValidPass(txt_pass.Text) && IsValidPass(txt_user.Text))
             {
                 User.Create(txt_user.Text.ToLower(), Encrypt(txt_pass.Text));
                 notifyIcon1.BalloonTipTitle = "REGISTER";

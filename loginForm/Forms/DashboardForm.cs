@@ -19,6 +19,7 @@ namespace loginForm.Forms
             InitializeComponent();
             countBooks();
             countBorrower();
+            qtyBooks();
         }
 
         SqlConnection con = new SqlConnection(Database.ConnectionString);
@@ -40,6 +41,16 @@ namespace loginForm.Forms
             DataTable dt = new DataTable();
             sda.Fill(dt);
             lblBorrower.Text = dt.Rows[0][0].ToString();
+            con.Close();
+        }
+
+        private void qtyBooks()
+        {
+            con.Open();
+            SqlDataAdapter sda = new SqlDataAdapter("Select Sum(Book_Quantity) from Table_Book", con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            lblqtyBooks.Text = dt.Rows[0][0].ToString();
             con.Close();
         }
 

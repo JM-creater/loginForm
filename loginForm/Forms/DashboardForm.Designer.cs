@@ -34,20 +34,24 @@
             this.lblBorrower = new Guna.UI.WinForms.GunaLabel();
             this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
             this.gunaPanel2 = new Guna.UI.WinForms.GunaPanel();
+            this.gunaPanel3 = new Guna.UI.WinForms.GunaPanel();
+            this.lblqtyBooks = new Guna.UI.WinForms.GunaLabel();
+            this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
             this.gunaPanel1.SuspendLayout();
             this.gunaPanel2.SuspendLayout();
+            this.gunaPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // gunaLabel1
             // 
             this.gunaLabel1.AutoSize = true;
-            this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel1.ForeColor = System.Drawing.Color.White;
-            this.gunaLabel1.Location = new System.Drawing.Point(16, 22);
+            this.gunaLabel1.Location = new System.Drawing.Point(18, 32);
             this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(251, 41);
+            this.gunaLabel1.Size = new System.Drawing.Size(274, 31);
             this.gunaLabel1.TabIndex = 0;
-            this.gunaLabel1.Text = "Number of Books";
+            this.gunaLabel1.Text = "Number of Books in Rows";
             // 
             // bookLbl
             // 
@@ -63,13 +67,13 @@
             // gunaLabel5
             // 
             this.gunaLabel5.AutoSize = true;
-            this.gunaLabel5.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel5.ForeColor = System.Drawing.Color.White;
-            this.gunaLabel5.Location = new System.Drawing.Point(6, 22);
+            this.gunaLabel5.Location = new System.Drawing.Point(10, 32);
             this.gunaLabel5.Name = "gunaLabel5";
-            this.gunaLabel5.Size = new System.Drawing.Size(304, 41);
+            this.gunaLabel5.Size = new System.Drawing.Size(271, 28);
             this.gunaLabel5.TabIndex = 0;
-            this.gunaLabel5.Text = "Number of Borrowers";
+            this.gunaLabel5.Text = "Number of Borrowers in Rows";
             // 
             // lblBorrower
             // 
@@ -87,7 +91,7 @@
             this.gunaPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.gunaPanel1.Controls.Add(this.bookLbl);
             this.gunaPanel1.Controls.Add(this.gunaLabel1);
-            this.gunaPanel1.Location = new System.Drawing.Point(99, 156);
+            this.gunaPanel1.Location = new System.Drawing.Point(70, 46);
             this.gunaPanel1.Name = "gunaPanel1";
             this.gunaPanel1.Size = new System.Drawing.Size(310, 173);
             this.gunaPanel1.TabIndex = 1;
@@ -97,10 +101,42 @@
             this.gunaPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.gunaPanel2.Controls.Add(this.gunaLabel5);
             this.gunaPanel2.Controls.Add(this.lblBorrower);
-            this.gunaPanel2.Location = new System.Drawing.Point(486, 156);
+            this.gunaPanel2.Location = new System.Drawing.Point(477, 46);
             this.gunaPanel2.Name = "gunaPanel2";
             this.gunaPanel2.Size = new System.Drawing.Size(310, 173);
             this.gunaPanel2.TabIndex = 2;
+            // 
+            // gunaPanel3
+            // 
+            this.gunaPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.gunaPanel3.Controls.Add(this.lblqtyBooks);
+            this.gunaPanel3.Controls.Add(this.gunaLabel3);
+            this.gunaPanel3.Location = new System.Drawing.Point(272, 264);
+            this.gunaPanel3.Name = "gunaPanel3";
+            this.gunaPanel3.Size = new System.Drawing.Size(310, 173);
+            this.gunaPanel3.TabIndex = 2;
+            // 
+            // lblqtyBooks
+            // 
+            this.lblqtyBooks.AutoSize = true;
+            this.lblqtyBooks.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblqtyBooks.ForeColor = System.Drawing.Color.White;
+            this.lblqtyBooks.Location = new System.Drawing.Point(84, 95);
+            this.lblqtyBooks.Name = "lblqtyBooks";
+            this.lblqtyBooks.Size = new System.Drawing.Size(171, 41);
+            this.lblqtyBooks.TabIndex = 0;
+            this.lblqtyBooks.Text = "gunaLabel1";
+            // 
+            // gunaLabel3
+            // 
+            this.gunaLabel3.AutoSize = true;
+            this.gunaLabel3.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel3.ForeColor = System.Drawing.Color.White;
+            this.gunaLabel3.Location = new System.Drawing.Point(16, 22);
+            this.gunaLabel3.Name = "gunaLabel3";
+            this.gunaLabel3.Size = new System.Drawing.Size(256, 41);
+            this.gunaLabel3.TabIndex = 0;
+            this.gunaLabel3.Text = "Quantity of Books";
             // 
             // DashboardForm
             // 
@@ -108,6 +144,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(48)))), ((int)(((byte)(76)))));
             this.ClientSize = new System.Drawing.Size(897, 502);
+            this.Controls.Add(this.gunaPanel3);
             this.Controls.Add(this.gunaPanel2);
             this.Controls.Add(this.gunaPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -117,6 +154,8 @@
             this.gunaPanel1.PerformLayout();
             this.gunaPanel2.ResumeLayout(false);
             this.gunaPanel2.PerformLayout();
+            this.gunaPanel3.ResumeLayout(false);
+            this.gunaPanel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -129,5 +168,8 @@
         private Guna.UI.WinForms.GunaLabel lblBorrower;
         private Guna.UI.WinForms.GunaPanel gunaPanel1;
         private Guna.UI.WinForms.GunaPanel gunaPanel2;
+        private Guna.UI.WinForms.GunaPanel gunaPanel3;
+        private Guna.UI.WinForms.GunaLabel lblqtyBooks;
+        private Guna.UI.WinForms.GunaLabel gunaLabel3;
     }
 }
