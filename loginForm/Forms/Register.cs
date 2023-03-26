@@ -35,7 +35,6 @@ namespace loginForm
             }
         }
 
-
         public static bool IsValidPass(string newPass)
         {
             string strRegex = @"^(?:[A-Z][a-zA-Z0-9_\W]+)?$"; //@"^[A-Z][a-zA-Z0-9_\W]+$"
@@ -50,12 +49,11 @@ namespace loginForm
             }
         }
 
-
         private void btn_signup_Click(object sender, EventArgs e)
         {
             var acc = User.Read(txt_user.Text);
 
-            if (txt_user.Text != "" && txt_pass.Text == txt_conpass.Text && acc == null)
+            if (txt_user.Text != "" && txt_pass.Text == txt_conpass.Text && acc == null && IsValidPass(txt_pass.Text)
             {
                 User.Create(txt_user.Text.ToLower(), Encrypt(txt_pass.Text));
                 notifyIcon1.BalloonTipTitle = "REGISTER";
@@ -67,8 +65,11 @@ namespace loginForm
                 txt_conpass.Clear();
                 txt_user.Focus();
 
-                loadingScreenForm loadingScreenForm = new loadingScreenForm();
-                loadingScreenForm.Show();
+                //loadingScreenForm loadingScreenForm = new loadingScreenForm();
+                //loadingScreenForm.Show();
+                //this.Hide();
+                Menu menu = new Menu();
+                menu.Show();
                 this.Hide();
 
             }
@@ -105,7 +106,6 @@ namespace loginForm
                 txt_user.Focus();
             }
         }
-
 
         public static string Decrypt(string cipherText)
         {

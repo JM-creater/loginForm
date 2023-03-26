@@ -43,11 +43,11 @@
             this.gunaLabel1.AutoSize = true;
             this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel1.ForeColor = System.Drawing.Color.White;
-            this.gunaLabel1.Location = new System.Drawing.Point(52, 23);
+            this.gunaLabel1.Location = new System.Drawing.Point(16, 22);
             this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(86, 41);
+            this.gunaLabel1.Size = new System.Drawing.Size(251, 41);
             this.gunaLabel1.TabIndex = 0;
-            this.gunaLabel1.Text = "Book";
+            this.gunaLabel1.Text = "Number of Books";
             // 
             // bookLbl
             // 
@@ -65,11 +65,11 @@
             this.gunaLabel5.AutoSize = true;
             this.gunaLabel5.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel5.ForeColor = System.Drawing.Color.White;
-            this.gunaLabel5.Location = new System.Drawing.Point(39, 22);
+            this.gunaLabel5.Location = new System.Drawing.Point(6, 22);
             this.gunaLabel5.Name = "gunaLabel5";
-            this.gunaLabel5.Size = new System.Drawing.Size(139, 41);
+            this.gunaLabel5.Size = new System.Drawing.Size(304, 41);
             this.gunaLabel5.TabIndex = 0;
-            this.gunaLabel5.Text = "Borrower";
+            this.gunaLabel5.Text = "Number of Borrowers";
             // 
             // lblBorrower
             // 

@@ -134,7 +134,6 @@
             this.txt_FnameSearch.Size = new System.Drawing.Size(284, 32);
             this.txt_FnameSearch.TabIndex = 5;
             this.txt_FnameSearch.TextChanged += new System.EventHandler(this.txt_FnameSearch_TextChanged);
-            this.txt_FnameSearch.Click += new System.EventHandler(this.txt_FnameSearch_Click);
             // 
             // label3
             // 

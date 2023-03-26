@@ -78,8 +78,11 @@ namespace loginForm
                 notifyIcon1.ShowBalloonTip(100);
                 notifyIcon1.Dispose();
 
-                loadingScreenForm loadingScreenForm = new loadingScreenForm();
-                loadingScreenForm.Show();
+                //loadingScreenForm loadingScreenForm = new loadingScreenForm();
+                //loadingScreenForm.Show();
+                //this.Hide();
+                Menu menu = new Menu();
+                menu.Show();
                 this.Hide();
                 txt_username.Clear();
                 txt_password.Clear();
