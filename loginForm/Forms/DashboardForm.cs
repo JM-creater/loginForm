@@ -47,10 +47,13 @@ namespace loginForm.Forms
         private void qtyBooks()
         {
             con.Open();
-            SqlDataAdapter sda = new SqlDataAdapter("Select Sum(Book_Quantity) from Table_Book", con);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-            lblqtyBooks.Text = dt.Rows[0][0].ToString();
+            SqlCommand cmd = new SqlCommand("SELECT SUM(Book_Quantity) FROM Table_Book", con);
+            object result = cmd.ExecuteScalar();
+            if (result != null)
+            {
+               int qty = (int)result;
+               lblqtyBooks.Text = qty.ToString();
+            }
             con.Close();
         }
 

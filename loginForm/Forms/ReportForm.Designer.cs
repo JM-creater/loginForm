@@ -31,6 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReportForm));
             this.DTP_start = new Guna.UI.WinForms.GunaDateTimePicker();
             this.DTP_end = new Guna.UI.WinForms.GunaDateTimePicker();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
@@ -38,6 +39,9 @@
             this.btn_show = new Guna.UI.WinForms.GunaGradientButton();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.btn_Print = new Guna.UI.WinForms.GunaGradientButton();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             ((System.ComponentModel.ISupportInitialize)(this.datagrid_Reports)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,7 +54,7 @@
             this.DTP_start.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.DTP_start.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.DTP_start.ForeColor = System.Drawing.Color.Black;
-            this.DTP_start.Location = new System.Drawing.Point(52, 109);
+            this.DTP_start.Location = new System.Drawing.Point(23, 109);
             this.DTP_start.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.DTP_start.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.DTP_start.Name = "DTP_start";
@@ -58,7 +62,7 @@
             this.DTP_start.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.DTP_start.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.DTP_start.OnPressedColor = System.Drawing.Color.Black;
-            this.DTP_start.Size = new System.Drawing.Size(230, 39);
+            this.DTP_start.Size = new System.Drawing.Size(261, 39);
             this.DTP_start.TabIndex = 0;
             this.DTP_start.Text = "Friday, 17 March 2023";
             this.DTP_start.Value = new System.DateTime(2023, 3, 17, 9, 3, 16, 716);
@@ -72,7 +76,7 @@
             this.DTP_end.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.DTP_end.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.DTP_end.ForeColor = System.Drawing.Color.Black;
-            this.DTP_end.Location = new System.Drawing.Point(333, 109);
+            this.DTP_end.Location = new System.Drawing.Point(300, 109);
             this.DTP_end.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.DTP_end.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.DTP_end.Name = "DTP_end";
@@ -80,7 +84,7 @@
             this.DTP_end.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.DTP_end.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.DTP_end.OnPressedColor = System.Drawing.Color.Black;
-            this.DTP_end.Size = new System.Drawing.Size(230, 39);
+            this.DTP_end.Size = new System.Drawing.Size(261, 39);
             this.DTP_end.TabIndex = 1;
             this.DTP_end.Text = "Friday, 17 March 2023";
             this.DTP_end.Value = new System.DateTime(2023, 3, 17, 9, 3, 28, 73);
@@ -174,7 +178,7 @@
             this.btn_show.ForeColor = System.Drawing.Color.White;
             this.btn_show.Image = null;
             this.btn_show.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_show.Location = new System.Drawing.Point(776, 134);
+            this.btn_show.Location = new System.Drawing.Point(589, 134);
             this.btn_show.Name = "btn_show";
             this.btn_show.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(24)))), ((int)(((byte)(83)))));
             this.btn_show.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(24)))), ((int)(((byte)(83)))));
@@ -194,7 +198,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(48, 86);
+            this.label1.Location = new System.Drawing.Point(19, 86);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(86, 20);
             this.label1.TabIndex = 8;
@@ -205,11 +209,55 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(329, 86);
+            this.label2.Location = new System.Drawing.Point(296, 86);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(79, 20);
             this.label2.TabIndex = 9;
             this.label2.Text = "End Date";
+            // 
+            // btn_Print
+            // 
+            this.btn_Print.AnimationHoverSpeed = 0.07F;
+            this.btn_Print.AnimationSpeed = 0.03F;
+            this.btn_Print.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Print.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(25)))), ((int)(((byte)(64)))));
+            this.btn_Print.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(25)))), ((int)(((byte)(64)))));
+            this.btn_Print.BorderColor = System.Drawing.Color.Black;
+            this.btn_Print.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_Print.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_Print.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Print.ForeColor = System.Drawing.Color.White;
+            this.btn_Print.Image = null;
+            this.btn_Print.ImageSize = new System.Drawing.Size(20, 20);
+            this.btn_Print.Location = new System.Drawing.Point(776, 134);
+            this.btn_Print.Name = "btn_Print";
+            this.btn_Print.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(24)))), ((int)(((byte)(83)))));
+            this.btn_Print.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(24)))), ((int)(((byte)(83)))));
+            this.btn_Print.OnHoverBorderColor = System.Drawing.Color.Red;
+            this.btn_Print.OnHoverForeColor = System.Drawing.Color.White;
+            this.btn_Print.OnHoverImage = null;
+            this.btn_Print.OnPressedColor = System.Drawing.Color.Black;
+            this.btn_Print.Radius = 8;
+            this.btn_Print.Size = new System.Drawing.Size(160, 42);
+            this.btn_Print.TabIndex = 10;
+            this.btn_Print.Text = "Print";
+            this.btn_Print.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btn_Print.Click += new System.EventHandler(this.btn_Print_Click);
+            // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Document = this.printDocument1;
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
             // 
             // ReportForm
             // 
@@ -217,6 +265,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(48)))), ((int)(((byte)(76)))));
             this.ClientSize = new System.Drawing.Size(948, 550);
+            this.Controls.Add(this.btn_Print);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_show);
@@ -244,5 +293,8 @@
         private Guna.UI.WinForms.GunaGradientButton btn_show;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private Guna.UI.WinForms.GunaGradientButton btn_Print;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
     }
 }
