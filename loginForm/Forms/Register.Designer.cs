@@ -51,6 +51,7 @@
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.label7 = new System.Windows.Forms.Label();
             this.lbl_reg = new System.Windows.Forms.LinkLabel();
+            this.notifyIcon2 = new System.Windows.Forms.NotifyIcon(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.gunaGradientPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -288,6 +289,13 @@
             this.lbl_reg.Text = "Sign In";
             this.lbl_reg.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lbl_reg_LinkClicked);
             // 
+            // notifyIcon2
+            // 
+            this.notifyIcon2.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Error;
+            this.notifyIcon2.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon2.Icon")));
+            this.notifyIcon2.Text = "notifyIcon2";
+            this.notifyIcon2.Visible = true;
+            // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -343,5 +351,6 @@
         private System.Windows.Forms.NotifyIcon notifyIcon1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.LinkLabel lbl_reg;
+        private System.Windows.Forms.NotifyIcon notifyIcon2;
     }
 }

@@ -105,8 +105,8 @@
             // 
             // cb_Books
             // 
-            this.cb_Books.BackColor = System.Drawing.Color.Transparent;
-            this.cb_Books.BaseColor = System.Drawing.Color.Transparent;
+            this.cb_Books.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(48)))), ((int)(((byte)(76)))));
+            this.cb_Books.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(48)))), ((int)(((byte)(76)))));
             this.cb_Books.BorderColor = System.Drawing.Color.Brown;
             this.cb_Books.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cb_Books.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -116,15 +116,15 @@
             this.cb_Books.FormattingEnabled = true;
             this.cb_Books.Location = new System.Drawing.Point(82, 163);
             this.cb_Books.Name = "cb_Books";
-            this.cb_Books.OnHoverItemBaseColor = System.Drawing.Color.LightSalmon;
+            this.cb_Books.OnHoverItemBaseColor = System.Drawing.Color.Brown;
             this.cb_Books.OnHoverItemForeColor = System.Drawing.Color.White;
             this.cb_Books.Size = new System.Drawing.Size(265, 31);
             this.cb_Books.TabIndex = 5;
             // 
             // cb_Borrowers
             // 
-            this.cb_Borrowers.BackColor = System.Drawing.Color.Transparent;
-            this.cb_Borrowers.BaseColor = System.Drawing.Color.Transparent;
+            this.cb_Borrowers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(48)))), ((int)(((byte)(76)))));
+            this.cb_Borrowers.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(48)))), ((int)(((byte)(76)))));
             this.cb_Borrowers.BorderColor = System.Drawing.Color.Brown;
             this.cb_Borrowers.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cb_Borrowers.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -134,7 +134,7 @@
             this.cb_Borrowers.FormattingEnabled = true;
             this.cb_Borrowers.Location = new System.Drawing.Point(82, 273);
             this.cb_Borrowers.Name = "cb_Borrowers";
-            this.cb_Borrowers.OnHoverItemBaseColor = System.Drawing.Color.LightSalmon;
+            this.cb_Borrowers.OnHoverItemBaseColor = System.Drawing.Color.Brown;
             this.cb_Borrowers.OnHoverItemForeColor = System.Drawing.Color.White;
             this.cb_Borrowers.Size = new System.Drawing.Size(265, 31);
             this.cb_Borrowers.TabIndex = 6;

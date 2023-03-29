@@ -15,6 +15,11 @@ namespace loginForm
 {
     public partial class ReportForm : Form
     {
+        //string Title, BName;
+        //DateTime BorrowedDate, ReturnedDate;
+        //bool Return;
+        //int pos = 60;
+
         public ReportForm()
         {
             InitializeComponent();
@@ -39,8 +44,8 @@ namespace loginForm
 
         private void btn_Print_Click(object sender, EventArgs e)
         {
-            PrintDialog printDialog1 = new PrintDialog();
-            if (printDialog1.ShowDialog() == DialogResult.OK)
+            printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("pprnm", 285, 600);
+            if (printPreviewDialog1.ShowDialog() == DialogResult.OK)
             {
                 printDocument1.Print();
             }
@@ -50,6 +55,9 @@ namespace loginForm
         {
             Transaction transaction = new Transaction();
             DataTable dt = Transaction.getAllTransaction(DTP_start.Value, DTP_end.Value);
+
+            e.Graphics.DrawString("Library System", new Font("Century Gothic", 12, FontStyle.Bold), Brushes.Red, new Point(80));
+            e.Graphics.DrawString("Title Name BorrowedDate ReturnedDate Return", new Font("Century Gothic", 10, FontStyle.Bold), Brushes.Red, new Point(26, 40));
 
             Font font = new Font("Arial", 12, FontStyle.Regular);
             int margin = 50;

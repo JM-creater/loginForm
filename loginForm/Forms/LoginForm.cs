@@ -90,10 +90,10 @@ namespace loginForm
             }
             else
             {
-                notifyIcon1.BalloonTipTitle = "ERROR";
-                notifyIcon1.BalloonTipText = "User not found";
-                notifyIcon1.ShowBalloonTip(100);
-                notifyIcon1.Dispose();
+                notifyIcon2.BalloonTipTitle = "ERROR";
+                notifyIcon2.BalloonTipText = "User not found";
+                notifyIcon2.ShowBalloonTip(100);
+                notifyIcon2.Dispose();
                 txt_username.Clear();
                 txt_password.Clear();
                 txt_username.Focus();

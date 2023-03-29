@@ -133,5 +133,31 @@ namespace login.form
             return dt;
         }
 
+        public static DataTable IsAlreadyExistBorrower(string Borrower_Fname, string Borrower_Lname) 
+        {
+            SqlConnection con = new SqlConnection(Database.ConnectionString);
+            DataTable dt = new DataTable();
+            try
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand("AlreadyExist_Borrower", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Borrower_Fname", Borrower_Fname);
+                cmd.Parameters.AddWithValue("@Borrower_Lname", Borrower_Lname);
+                SqlDataReader dr = cmd.ExecuteReader();
+                dt.Load(dr);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally 
+            {
+                con.Close();
+            }
+            return dt;
+        }
+
     }
 }

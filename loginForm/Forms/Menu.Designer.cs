@@ -242,7 +242,7 @@
             // 
             // gunaPanel1
             // 
-            this.gunaPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(63)))), ((int)(((byte)(81)))));
+            this.gunaPanel1.BackColor = System.Drawing.Color.SlateGray;
             this.gunaPanel1.Controls.Add(this.gunaSeparator1);
             this.gunaPanel1.Controls.Add(this.gunaGradientButton5);
             this.gunaPanel1.Controls.Add(this.gunaGradientButton7);

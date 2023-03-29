@@ -45,44 +45,44 @@
             // gunaLabel1
             // 
             this.gunaLabel1.AutoSize = true;
-            this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel1.ForeColor = System.Drawing.Color.White;
             this.gunaLabel1.Location = new System.Drawing.Point(3, 12);
             this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(206, 23);
+            this.gunaLabel1.Size = new System.Drawing.Size(274, 31);
             this.gunaLabel1.TabIndex = 0;
             this.gunaLabel1.Text = "Number of Books in Rows";
             // 
             // bookLbl
             // 
             this.bookLbl.AutoSize = true;
-            this.bookLbl.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bookLbl.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bookLbl.ForeColor = System.Drawing.Color.White;
-            this.bookLbl.Location = new System.Drawing.Point(32, 51);
+            this.bookLbl.Location = new System.Drawing.Point(95, 71);
             this.bookLbl.Name = "bookLbl";
-            this.bookLbl.Size = new System.Drawing.Size(103, 25);
+            this.bookLbl.Size = new System.Drawing.Size(159, 38);
             this.bookLbl.TabIndex = 0;
             this.bookLbl.Text = "gunaLabel1";
             // 
             // gunaLabel5
             // 
             this.gunaLabel5.AutoSize = true;
-            this.gunaLabel5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel5.ForeColor = System.Drawing.Color.White;
-            this.gunaLabel5.Location = new System.Drawing.Point(3, 13);
+            this.gunaLabel5.Location = new System.Drawing.Point(6, 14);
             this.gunaLabel5.Name = "gunaLabel5";
-            this.gunaLabel5.Size = new System.Drawing.Size(207, 20);
+            this.gunaLabel5.Size = new System.Drawing.Size(271, 28);
             this.gunaLabel5.TabIndex = 0;
             this.gunaLabel5.Text = "Number of Borrowers in Rows";
             // 
             // lblBorrower
             // 
             this.lblBorrower.AutoSize = true;
-            this.lblBorrower.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBorrower.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBorrower.ForeColor = System.Drawing.Color.White;
-            this.lblBorrower.Location = new System.Drawing.Point(32, 51);
+            this.lblBorrower.Location = new System.Drawing.Point(84, 71);
             this.lblBorrower.Name = "lblBorrower";
-            this.lblBorrower.Size = new System.Drawing.Size(103, 25);
+            this.lblBorrower.Size = new System.Drawing.Size(159, 38);
             this.lblBorrower.TabIndex = 0;
             this.lblBorrower.Text = "gunaLabel1";
             // 
@@ -91,9 +91,9 @@
             this.gunaPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.gunaPanel1.Controls.Add(this.bookLbl);
             this.gunaPanel1.Controls.Add(this.gunaLabel1);
-            this.gunaPanel1.Location = new System.Drawing.Point(30, 46);
+            this.gunaPanel1.Location = new System.Drawing.Point(115, 95);
             this.gunaPanel1.Name = "gunaPanel1";
-            this.gunaPanel1.Size = new System.Drawing.Size(232, 98);
+            this.gunaPanel1.Size = new System.Drawing.Size(278, 133);
             this.gunaPanel1.TabIndex = 1;
             // 
             // gunaPanel2
@@ -101,9 +101,9 @@
             this.gunaPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.gunaPanel2.Controls.Add(this.gunaLabel5);
             this.gunaPanel2.Controls.Add(this.lblBorrower);
-            this.gunaPanel2.Location = new System.Drawing.Point(328, 46);
+            this.gunaPanel2.Location = new System.Drawing.Point(500, 95);
             this.gunaPanel2.Name = "gunaPanel2";
-            this.gunaPanel2.Size = new System.Drawing.Size(232, 98);
+            this.gunaPanel2.Size = new System.Drawing.Size(277, 133);
             this.gunaPanel2.TabIndex = 2;
             // 
             // gunaPanel3
@@ -111,30 +111,30 @@
             this.gunaPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.gunaPanel3.Controls.Add(this.lblqtyBooks);
             this.gunaPanel3.Controls.Add(this.gunaLabel3);
-            this.gunaPanel3.Location = new System.Drawing.Point(622, 46);
+            this.gunaPanel3.Location = new System.Drawing.Point(293, 288);
             this.gunaPanel3.Name = "gunaPanel3";
-            this.gunaPanel3.Size = new System.Drawing.Size(232, 98);
+            this.gunaPanel3.Size = new System.Drawing.Size(281, 130);
             this.gunaPanel3.TabIndex = 2;
             // 
             // lblqtyBooks
             // 
             this.lblqtyBooks.AutoSize = true;
-            this.lblqtyBooks.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblqtyBooks.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblqtyBooks.ForeColor = System.Drawing.Color.White;
-            this.lblqtyBooks.Location = new System.Drawing.Point(32, 45);
+            this.lblqtyBooks.Location = new System.Drawing.Point(93, 64);
             this.lblqtyBooks.Name = "lblqtyBooks";
-            this.lblqtyBooks.Size = new System.Drawing.Size(103, 25);
+            this.lblqtyBooks.Size = new System.Drawing.Size(159, 38);
             this.lblqtyBooks.TabIndex = 0;
             this.lblqtyBooks.Text = "gunaLabel1";
             // 
             // gunaLabel3
             // 
             this.gunaLabel3.AutoSize = true;
-            this.gunaLabel3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel3.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel3.ForeColor = System.Drawing.Color.White;
-            this.gunaLabel3.Location = new System.Drawing.Point(3, 11);
+            this.gunaLabel3.Location = new System.Drawing.Point(3, 7);
             this.gunaLabel3.Name = "gunaLabel3";
-            this.gunaLabel3.Size = new System.Drawing.Size(146, 23);
+            this.gunaLabel3.Size = new System.Drawing.Size(238, 38);
             this.gunaLabel3.TabIndex = 0;
             this.gunaLabel3.Text = "Quantity of Books";
             // 

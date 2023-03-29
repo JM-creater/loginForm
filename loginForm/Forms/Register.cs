@@ -75,31 +75,31 @@ namespace loginForm
             }
             else if (txt_user.Text == "" && txt_pass.Text != "" && txt_conpass.Text != "")
             {
-                notifyIcon1.BalloonTipTitle = "Information";
-                notifyIcon1.BalloonTipText = "Please input username";
-                notifyIcon1.ShowBalloonTip(100);
-                notifyIcon1.Dispose();
+                notifyIcon2.BalloonTipTitle = "Information";
+                notifyIcon2.BalloonTipText = "Please input username";
+                notifyIcon2.ShowBalloonTip(100);
+                notifyIcon2.Dispose();
             }
             else if (txt_user.Text != "" && txt_pass.Text == "" && txt_conpass.Text != "")
             {
-                notifyIcon1.BalloonTipTitle = "Information";
-                notifyIcon1.BalloonTipText = "Please input password";
-                notifyIcon1.ShowBalloonTip(100);
-                notifyIcon1.Dispose();
+                notifyIcon2.BalloonTipTitle = "Information";
+                notifyIcon2.BalloonTipText = "Please input password";
+                notifyIcon2.ShowBalloonTip(100);
+                notifyIcon2.Dispose();
             }
             else if (txt_user.Text != "" && txt_pass.Text != "" && txt_conpass.Text == "")
             {
-                notifyIcon1.BalloonTipTitle = "Information";
-                notifyIcon1.BalloonTipText = "Please confirm password";
-                notifyIcon1.ShowBalloonTip(100);
-                notifyIcon1.Dispose();
+                notifyIcon2.BalloonTipTitle = "Information";
+                notifyIcon2.BalloonTipText = "Please confirm password";
+                notifyIcon2.ShowBalloonTip(100);
+                notifyIcon2.Dispose();
             }
             else
             {
-                notifyIcon1.BalloonTipTitle = "ERROR";
-                notifyIcon1.BalloonTipText = "Unable to register";
-                notifyIcon1.ShowBalloonTip(100);
-                notifyIcon1.Dispose();
+                notifyIcon2.BalloonTipTitle = "ERROR";
+                notifyIcon2.BalloonTipText = "Unable to register";
+                notifyIcon2.ShowBalloonTip(100);
+                notifyIcon2.Dispose();
                 txt_user.Clear();
                 txt_pass.Clear();
                 txt_conpass.Clear();

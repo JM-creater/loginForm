@@ -22,6 +22,16 @@ namespace loginForm
         {
             if (txt_BookTitle.Text != "" && txt_BookAuthor.Text != "" && numeric_BookQty.Value != 0)
             {
+                DataTable dt = Book.IsAlreadyExistBook(txt_BookTitle.Text, txt_BookAuthor.Text);
+                if (dt.Rows.Count > 0)
+                {
+                    notifyIcon2.BalloonTipTitle = "Error";
+                    notifyIcon2.BalloonTipText = "Book Already Exists";
+                    notifyIcon2.ShowBalloonTip(100);
+                    notifyIcon2.Dispose();
+                    return;
+                }
+
                 Book.Create(txt_BookTitle.Text, txt_BookAuthor.Text, ((int)numeric_BookQty.Value));
                 notifyIcon1.BalloonTipTitle = "Information";
                 notifyIcon1.BalloonTipText = "You've Successfully Added Book";

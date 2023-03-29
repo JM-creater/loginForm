@@ -54,10 +54,10 @@ namespace loginForm.Forms
             }
             else
             {
-                notifyIcon1.BalloonTipTitle = "ERROR";
-                notifyIcon1.BalloonTipText = "Please Input Username";
-                notifyIcon1.ShowBalloonTip(100);
-                notifyIcon1.Dispose();
+                notifyIcon2.BalloonTipTitle = "ERROR";
+                notifyIcon2.BalloonTipText = "Please Input Username";
+                notifyIcon2.ShowBalloonTip(100);
+                notifyIcon2.Dispose();
             }
         }
 
