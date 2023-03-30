@@ -81,7 +81,7 @@
             this.btn_Return.ForeColor = System.Drawing.Color.White;
             this.btn_Return.Image = null;
             this.btn_Return.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_Return.Location = new System.Drawing.Point(757, 197);
+            this.btn_Return.Location = new System.Drawing.Point(812, 197);
             this.btn_Return.Name = "btn_Return";
             this.btn_Return.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(24)))), ((int)(((byte)(83)))));
             this.btn_Return.OnHoverBorderColor = System.Drawing.Color.Red;
@@ -134,7 +134,7 @@
             this.datagrid_Transaction.RowHeadersWidth = 51;
             this.datagrid_Transaction.RowTemplate.Height = 24;
             this.datagrid_Transaction.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.datagrid_Transaction.Size = new System.Drawing.Size(924, 328);
+            this.datagrid_Transaction.Size = new System.Drawing.Size(1010, 328);
             this.datagrid_Transaction.TabIndex = 17;
             this.datagrid_Transaction.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
             this.datagrid_Transaction.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -162,7 +162,7 @@
             // 
             // txt_IsReturned
             // 
-            this.txt_IsReturned.Location = new System.Drawing.Point(812, 40);
+            this.txt_IsReturned.Location = new System.Drawing.Point(880, 40);
             this.txt_IsReturned.Name = "txt_IsReturned";
             this.txt_IsReturned.Size = new System.Drawing.Size(124, 22);
             this.txt_IsReturned.TabIndex = 15;
@@ -170,7 +170,7 @@
             // 
             // txt_ID
             // 
-            this.txt_ID.Location = new System.Drawing.Point(812, 12);
+            this.txt_ID.Location = new System.Drawing.Point(880, 12);
             this.txt_ID.Name = "txt_ID";
             this.txt_ID.Size = new System.Drawing.Size(124, 22);
             this.txt_ID.TabIndex = 16;
@@ -231,7 +231,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(48)))), ((int)(((byte)(76)))));
-            this.ClientSize = new System.Drawing.Size(948, 585);
+            this.ClientSize = new System.Drawing.Size(1034, 585);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_Return);

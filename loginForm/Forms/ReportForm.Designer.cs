@@ -28,10 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReportForm));
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.DTP_start = new Guna.UI.WinForms.GunaDateTimePicker();
             this.DTP_end = new Guna.UI.WinForms.GunaDateTimePicker();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
@@ -42,7 +46,11 @@
             this.btn_Print = new Guna.UI.WinForms.GunaGradientButton();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.btn_graphical = new Guna.UI.WinForms.GunaGradientButton();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             ((System.ComponentModel.ISupportInitialize)(this.datagrid_Reports)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
             // DTP_start
@@ -139,7 +147,7 @@
             this.datagrid_Reports.RowHeadersWidth = 51;
             this.datagrid_Reports.RowTemplate.Height = 24;
             this.datagrid_Reports.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.datagrid_Reports.Size = new System.Drawing.Size(924, 356);
+            this.datagrid_Reports.Size = new System.Drawing.Size(989, 190);
             this.datagrid_Reports.TabIndex = 6;
             this.datagrid_Reports.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
             this.datagrid_Reports.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -178,7 +186,7 @@
             this.btn_show.ForeColor = System.Drawing.Color.White;
             this.btn_show.Image = null;
             this.btn_show.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_show.Location = new System.Drawing.Point(589, 134);
+            this.btn_show.Location = new System.Drawing.Point(598, 109);
             this.btn_show.Name = "btn_show";
             this.btn_show.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(24)))), ((int)(((byte)(83)))));
             this.btn_show.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(24)))), ((int)(((byte)(83)))));
@@ -229,7 +237,7 @@
             this.btn_Print.ForeColor = System.Drawing.Color.White;
             this.btn_Print.Image = null;
             this.btn_Print.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_Print.Location = new System.Drawing.Point(776, 134);
+            this.btn_Print.Location = new System.Drawing.Point(812, 98);
             this.btn_Print.Name = "btn_Print";
             this.btn_Print.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(24)))), ((int)(((byte)(83)))));
             this.btn_Print.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(24)))), ((int)(((byte)(83)))));
@@ -259,12 +267,66 @@
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
             // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.Text = "notifyIcon1";
+            this.notifyIcon1.Visible = true;
+            // 
+            // btn_graphical
+            // 
+            this.btn_graphical.AnimationHoverSpeed = 0.07F;
+            this.btn_graphical.AnimationSpeed = 0.03F;
+            this.btn_graphical.BackColor = System.Drawing.Color.Transparent;
+            this.btn_graphical.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(25)))), ((int)(((byte)(64)))));
+            this.btn_graphical.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(25)))), ((int)(((byte)(64)))));
+            this.btn_graphical.BorderColor = System.Drawing.Color.Black;
+            this.btn_graphical.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_graphical.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_graphical.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_graphical.ForeColor = System.Drawing.Color.White;
+            this.btn_graphical.Image = null;
+            this.btn_graphical.ImageSize = new System.Drawing.Size(20, 20);
+            this.btn_graphical.Location = new System.Drawing.Point(812, 38);
+            this.btn_graphical.Name = "btn_graphical";
+            this.btn_graphical.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(24)))), ((int)(((byte)(83)))));
+            this.btn_graphical.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(24)))), ((int)(((byte)(83)))));
+            this.btn_graphical.OnHoverBorderColor = System.Drawing.Color.Red;
+            this.btn_graphical.OnHoverForeColor = System.Drawing.Color.White;
+            this.btn_graphical.OnHoverImage = null;
+            this.btn_graphical.OnPressedColor = System.Drawing.Color.Black;
+            this.btn_graphical.Radius = 8;
+            this.btn_graphical.Size = new System.Drawing.Size(160, 42);
+            this.btn_graphical.TabIndex = 11;
+            this.btn_graphical.Text = "Chart";
+            this.btn_graphical.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btn_graphical.Click += new System.EventHandler(this.btn_graphical_Click);
+            // 
+            // chart1
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(12, 378);
+            this.chart1.Name = "chart1";
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
+            this.chart1.Size = new System.Drawing.Size(989, 300);
+            this.chart1.TabIndex = 12;
+            this.chart1.Text = "chart1";
+            this.chart1.Visible = false;
+            // 
             // ReportForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(48)))), ((int)(((byte)(76)))));
-            this.ClientSize = new System.Drawing.Size(948, 550);
+            this.ClientSize = new System.Drawing.Size(1013, 759);
+            this.Controls.Add(this.chart1);
+            this.Controls.Add(this.btn_graphical);
             this.Controls.Add(this.btn_Print);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -279,6 +341,7 @@
             this.Text = "ReportForm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ReportForm_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.datagrid_Reports)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -296,5 +359,8 @@
         private Guna.UI.WinForms.GunaGradientButton btn_Print;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Windows.Forms.NotifyIcon notifyIcon1;
+        private Guna.UI.WinForms.GunaGradientButton btn_graphical;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
     }
 }

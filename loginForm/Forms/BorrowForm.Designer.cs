@@ -46,7 +46,7 @@
             this.gunaLabel3.AutoSize = true;
             this.gunaLabel3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.gunaLabel3.Location = new System.Drawing.Point(78, 247);
+            this.gunaLabel3.Location = new System.Drawing.Point(121, 299);
             this.gunaLabel3.Name = "gunaLabel3";
             this.gunaLabel3.Size = new System.Drawing.Size(145, 23);
             this.gunaLabel3.TabIndex = 9;
@@ -57,7 +57,7 @@
             this.gunaLabel2.AutoSize = true;
             this.gunaLabel2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.gunaLabel2.Location = new System.Drawing.Point(78, 137);
+            this.gunaLabel2.Location = new System.Drawing.Point(121, 189);
             this.gunaLabel2.Name = "gunaLabel2";
             this.gunaLabel2.Size = new System.Drawing.Size(89, 23);
             this.gunaLabel2.TabIndex = 10;
@@ -68,7 +68,7 @@
             this.gunaLabel1.AutoSize = true;
             this.gunaLabel1.Font = new System.Drawing.Font("Arial Black", 25.8F, System.Drawing.FontStyle.Bold);
             this.gunaLabel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.gunaLabel1.Location = new System.Drawing.Point(72, 28);
+            this.gunaLabel1.Location = new System.Drawing.Point(68, 50);
             this.gunaLabel1.Name = "gunaLabel1";
             this.gunaLabel1.Size = new System.Drawing.Size(390, 60);
             this.gunaLabel1.TabIndex = 7;
@@ -88,7 +88,7 @@
             this.btn_Borrow.ForeColor = System.Drawing.Color.White;
             this.btn_Borrow.Image = null;
             this.btn_Borrow.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_Borrow.Location = new System.Drawing.Point(139, 350);
+            this.btn_Borrow.Location = new System.Drawing.Point(182, 402);
             this.btn_Borrow.Name = "btn_Borrow";
             this.btn_Borrow.OnHoverBaseColor1 = System.Drawing.Color.Red;
             this.btn_Borrow.OnHoverBaseColor2 = System.Drawing.Color.Red;
@@ -114,7 +114,7 @@
             this.cb_Books.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cb_Books.ForeColor = System.Drawing.Color.White;
             this.cb_Books.FormattingEnabled = true;
-            this.cb_Books.Location = new System.Drawing.Point(82, 163);
+            this.cb_Books.Location = new System.Drawing.Point(125, 215);
             this.cb_Books.Name = "cb_Books";
             this.cb_Books.OnHoverItemBaseColor = System.Drawing.Color.Brown;
             this.cb_Books.OnHoverItemForeColor = System.Drawing.Color.White;
@@ -132,7 +132,7 @@
             this.cb_Borrowers.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cb_Borrowers.ForeColor = System.Drawing.Color.White;
             this.cb_Borrowers.FormattingEnabled = true;
-            this.cb_Borrowers.Location = new System.Drawing.Point(82, 273);
+            this.cb_Borrowers.Location = new System.Drawing.Point(125, 325);
             this.cb_Borrowers.Name = "cb_Borrowers";
             this.cb_Borrowers.OnHoverItemBaseColor = System.Drawing.Color.Brown;
             this.cb_Borrowers.OnHoverItemForeColor = System.Drawing.Color.White;
@@ -150,7 +150,7 @@
             // 
             this.gunaPictureBox1.BaseColor = System.Drawing.Color.White;
             this.gunaPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("gunaPictureBox1.Image")));
-            this.gunaPictureBox1.Location = new System.Drawing.Point(384, 91);
+            this.gunaPictureBox1.Location = new System.Drawing.Point(478, 137);
             this.gunaPictureBox1.Name = "gunaPictureBox1";
             this.gunaPictureBox1.Size = new System.Drawing.Size(494, 380);
             this.gunaPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -162,7 +162,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(48)))), ((int)(((byte)(76)))));
-            this.ClientSize = new System.Drawing.Size(907, 530);
+            this.ClientSize = new System.Drawing.Size(1001, 634);
             this.Controls.Add(this.gunaLabel3);
             this.Controls.Add(this.gunaLabel2);
             this.Controls.Add(this.gunaLabel1);

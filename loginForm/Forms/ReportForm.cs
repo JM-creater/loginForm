@@ -10,7 +10,6 @@ using System.Threading.Tasks;
 using System.Web.Util;
 using System.Windows.Forms;
 
-
 namespace loginForm
 {
     public partial class ReportForm : Form
@@ -19,6 +18,7 @@ namespace loginForm
         //DateTime BorrowedDate, ReturnedDate;
         //bool Return;
         //int pos = 60;
+        private bool isChartVisible = false;
 
         public ReportForm()
         {
@@ -45,9 +45,17 @@ namespace loginForm
         private void btn_Print_Click(object sender, EventArgs e)
         {
             printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("pprnm", 285, 600);
-            if (printPreviewDialog1.ShowDialog() == DialogResult.OK)
+            if (datagrid_Reports.Rows.Count == 0)
+            {
+                MessageBox.Show("No data to print.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (printPreviewDialog1.ShowDialog() == DialogResult.OK)
             {
                 printDocument1.Print();
+            }
+            else
+            {
+                MessageBox.Show("Printing cancelled.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -62,7 +70,6 @@ namespace loginForm
             Font font = new Font("Arial", 12, FontStyle.Regular);
             int margin = 50;
 
-            // Loop through the transaction data and draw it to the printer page
             for (int i = 0; i < dt.Rows.Count; i++)
             {
                 e.Graphics.DrawString(dt.Rows[i]["Book Title"].ToString(), font, Brushes.Black, margin, margin + (i * 20));
@@ -70,6 +77,35 @@ namespace loginForm
                 e.Graphics.DrawString(dt.Rows[i]["Borrowed Date"].ToString(), font, Brushes.Black, margin + 200, margin + (i * 20));
                 e.Graphics.DrawString(dt.Rows[i]["Returned Date"].ToString(), font, Brushes.Black, margin + 300, margin + (i * 20));
                 e.Graphics.DrawString(dt.Rows[i]["Returned"].ToString(), font, Brushes.Black, margin + 400, margin + (i * 20));
+            }
+        }
+
+        private void btn_graphical_Click(object sender, EventArgs e)
+        {
+            if (isChartVisible)
+            {
+                chart1.Hide();
+                isChartVisible = false;
+            }
+            else
+            {
+                var dt = Transaction.getAllTransaction(DTP_start.Value, DTP_end.Value);
+                if (dt.Rows.Count == 0)
+                {
+                    MessageBox.Show("No data found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                chart1.DataSource = dt;
+                chart1.Titles.Add("Books Returned");
+                chart1.Titles[0].Font = new Font("Arial", 12, FontStyle.Bold);
+                chart1.Titles[0].ForeColor = Color.Black;
+                chart1.Series[0].XValueMember = "Book Title";
+                chart1.Series[0].YValueMembers = "Returned";
+                chart1.DataBind();
+
+                chart1.Show();
+                isChartVisible = true;
             }
         }
     }

@@ -262,7 +262,7 @@
             this.gunaPanel1.Controls.Add(this.btn_AddBook);
             this.gunaPanel1.Controls.Add(this.txt_BookAuthor);
             this.gunaPanel1.Controls.Add(this.numeric_BookQty);
-            this.gunaPanel1.Location = new System.Drawing.Point(420, 12);
+            this.gunaPanel1.Location = new System.Drawing.Point(465, 12);
             this.gunaPanel1.Name = "gunaPanel1";
             this.gunaPanel1.Size = new System.Drawing.Size(556, 228);
             this.gunaPanel1.TabIndex = 13;
@@ -324,7 +324,7 @@
             this.datagrid_Book.RowHeadersWidth = 51;
             this.datagrid_Book.RowTemplate.Height = 24;
             this.datagrid_Book.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.datagrid_Book.Size = new System.Drawing.Size(976, 350);
+            this.datagrid_Book.Size = new System.Drawing.Size(1013, 350);
             this.datagrid_Book.TabIndex = 14;
             this.datagrid_Book.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
             this.datagrid_Book.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -373,7 +373,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(48)))), ((int)(((byte)(76)))));
-            this.ClientSize = new System.Drawing.Size(996, 636);
+            this.ClientSize = new System.Drawing.Size(1033, 636);
             this.Controls.Add(this.gunaPictureBox1);
             this.Controls.Add(this.datagrid_Book);
             this.Controls.Add(this.label3);

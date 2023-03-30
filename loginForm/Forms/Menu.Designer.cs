@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Guna.UI.Animation.Animation animation1 = new Guna.UI.Animation.Animation();
+            Guna.UI.Animation.Animation animation3 = new Guna.UI.Animation.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.gunaControlBox1 = new Guna.UI.WinForms.GunaControlBox();
@@ -67,7 +67,7 @@
             this.gunaTransition1.SetDecoration(this.gunaControlBox1, Guna.UI.Animation.DecorationType.None);
             this.gunaControlBox1.IconColor = System.Drawing.Color.White;
             this.gunaControlBox1.IconSize = 15F;
-            this.gunaControlBox1.Location = new System.Drawing.Point(1170, 12);
+            this.gunaControlBox1.Location = new System.Drawing.Point(1212, 12);
             this.gunaControlBox1.Name = "gunaControlBox1";
             this.gunaControlBox1.OnHoverBackColor = System.Drawing.Color.Red;
             this.gunaControlBox1.OnHoverIconColor = System.Drawing.Color.White;
@@ -84,9 +84,9 @@
             this.gunaPictureBox1.BaseColor = System.Drawing.Color.White;
             this.gunaTransition1.SetDecoration(this.gunaPictureBox1, Guna.UI.Animation.DecorationType.None);
             this.gunaPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("gunaPictureBox1.Image")));
-            this.gunaPictureBox1.Location = new System.Drawing.Point(64, 12);
+            this.gunaPictureBox1.Location = new System.Drawing.Point(53, 12);
             this.gunaPictureBox1.Name = "gunaPictureBox1";
-            this.gunaPictureBox1.Size = new System.Drawing.Size(71, 66);
+            this.gunaPictureBox1.Size = new System.Drawing.Size(105, 67);
             this.gunaPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.gunaPictureBox1.TabIndex = 0;
             this.gunaPictureBox1.TabStop = false;
@@ -105,7 +105,7 @@
             this.gunaBtn_Dashboard.ForeColor = System.Drawing.Color.White;
             this.gunaBtn_Dashboard.Image = ((System.Drawing.Image)(resources.GetObject("gunaBtn_Dashboard.Image")));
             this.gunaBtn_Dashboard.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaBtn_Dashboard.Location = new System.Drawing.Point(0, 84);
+            this.gunaBtn_Dashboard.Location = new System.Drawing.Point(0, 101);
             this.gunaBtn_Dashboard.Name = "gunaBtn_Dashboard";
             this.gunaBtn_Dashboard.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(25)))), ((int)(((byte)(64)))));
             this.gunaBtn_Dashboard.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(24)))), ((int)(((byte)(83)))));
@@ -133,7 +133,7 @@
             this.gunaGradientButton4.ForeColor = System.Drawing.Color.White;
             this.gunaGradientButton4.Image = ((System.Drawing.Image)(resources.GetObject("gunaGradientButton4.Image")));
             this.gunaGradientButton4.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaGradientButton4.Location = new System.Drawing.Point(0, 180);
+            this.gunaGradientButton4.Location = new System.Drawing.Point(0, 197);
             this.gunaGradientButton4.Name = "gunaGradientButton4";
             this.gunaGradientButton4.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(25)))), ((int)(((byte)(64)))));
             this.gunaGradientButton4.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(24)))), ((int)(((byte)(83)))));
@@ -161,7 +161,7 @@
             this.gunaGradientButton8.ForeColor = System.Drawing.Color.White;
             this.gunaGradientButton8.Image = ((System.Drawing.Image)(resources.GetObject("gunaGradientButton8.Image")));
             this.gunaGradientButton8.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaGradientButton8.Location = new System.Drawing.Point(0, 228);
+            this.gunaGradientButton8.Location = new System.Drawing.Point(0, 245);
             this.gunaGradientButton8.Name = "gunaGradientButton8";
             this.gunaGradientButton8.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(25)))), ((int)(((byte)(64)))));
             this.gunaGradientButton8.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(24)))), ((int)(((byte)(83)))));
@@ -189,7 +189,7 @@
             this.gunaGradientButton9.ForeColor = System.Drawing.Color.White;
             this.gunaGradientButton9.Image = ((System.Drawing.Image)(resources.GetObject("gunaGradientButton9.Image")));
             this.gunaGradientButton9.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaGradientButton9.Location = new System.Drawing.Point(0, 276);
+            this.gunaGradientButton9.Location = new System.Drawing.Point(0, 293);
             this.gunaGradientButton9.Name = "gunaGradientButton9";
             this.gunaGradientButton9.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(25)))), ((int)(((byte)(64)))));
             this.gunaGradientButton9.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(24)))), ((int)(((byte)(83)))));
@@ -217,7 +217,7 @@
             this.gunaGradientButton5.ForeColor = System.Drawing.Color.White;
             this.gunaGradientButton5.Image = ((System.Drawing.Image)(resources.GetObject("gunaGradientButton5.Image")));
             this.gunaGradientButton5.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaGradientButton5.Location = new System.Drawing.Point(0, 460);
+            this.gunaGradientButton5.Location = new System.Drawing.Point(0, 515);
             this.gunaGradientButton5.Name = "gunaGradientButton5";
             this.gunaGradientButton5.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(25)))), ((int)(((byte)(64)))));
             this.gunaGradientButton5.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(24)))), ((int)(((byte)(83)))));
@@ -235,7 +235,7 @@
             // 
             this.gunaTransition1.SetDecoration(this.gunaSeparator1, Guna.UI.Animation.DecorationType.None);
             this.gunaSeparator1.LineColor = System.Drawing.Color.DarkGray;
-            this.gunaSeparator1.Location = new System.Drawing.Point(12, 394);
+            this.gunaSeparator1.Location = new System.Drawing.Point(12, 439);
             this.gunaSeparator1.Name = "gunaSeparator1";
             this.gunaSeparator1.Size = new System.Drawing.Size(200, 10);
             this.gunaSeparator1.TabIndex = 7;
@@ -256,7 +256,7 @@
             this.gunaPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.gunaPanel1.Location = new System.Drawing.Point(0, 0);
             this.gunaPanel1.Name = "gunaPanel1";
-            this.gunaPanel1.Size = new System.Drawing.Size(217, 636);
+            this.gunaPanel1.Size = new System.Drawing.Size(217, 715);
             this.gunaPanel1.TabIndex = 0;
             // 
             // gunaGradientButton7
@@ -273,7 +273,7 @@
             this.gunaGradientButton7.ForeColor = System.Drawing.Color.White;
             this.gunaGradientButton7.Image = ((System.Drawing.Image)(resources.GetObject("gunaGradientButton7.Image")));
             this.gunaGradientButton7.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaGradientButton7.Location = new System.Drawing.Point(0, 324);
+            this.gunaGradientButton7.Location = new System.Drawing.Point(0, 341);
             this.gunaGradientButton7.Name = "gunaGradientButton7";
             this.gunaGradientButton7.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(25)))), ((int)(((byte)(64)))));
             this.gunaGradientButton7.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(24)))), ((int)(((byte)(83)))));
@@ -301,7 +301,7 @@
             this.gunaGradientButton1.ForeColor = System.Drawing.Color.White;
             this.gunaGradientButton1.Image = ((System.Drawing.Image)(resources.GetObject("gunaGradientButton1.Image")));
             this.gunaGradientButton1.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaGradientButton1.Location = new System.Drawing.Point(0, 132);
+            this.gunaGradientButton1.Location = new System.Drawing.Point(0, 149);
             this.gunaGradientButton1.Name = "gunaGradientButton1";
             this.gunaGradientButton1.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(25)))), ((int)(((byte)(64)))));
             this.gunaGradientButton1.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(24)))), ((int)(((byte)(83)))));
@@ -319,22 +319,22 @@
             // 
             this.gunaTransition1.AnimationType = Guna.UI.Animation.AnimationType.Transparent;
             this.gunaTransition1.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 1F;
-            this.gunaTransition1.DefaultAnimation = animation1;
+            animation3.AnimateOnlyDifferences = true;
+            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
+            animation3.LeafCoeff = 0F;
+            animation3.MaxTime = 1F;
+            animation3.MinTime = 0F;
+            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
+            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
+            animation3.MosaicSize = 0;
+            animation3.Padding = new System.Windows.Forms.Padding(0);
+            animation3.RotateCoeff = 0F;
+            animation3.RotateLimit = 0F;
+            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
+            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
+            animation3.TimeCoeff = 0F;
+            animation3.TransparencyCoeff = 1F;
+            this.gunaTransition1.DefaultAnimation = animation3;
             // 
             // tabControl1
             // 
@@ -346,7 +346,7 @@
             this.tabControl1.Location = new System.Drawing.Point(217, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(996, 636);
+            this.tabControl1.Size = new System.Drawing.Size(1038, 715);
             this.tabControl1.TabIndex = 4;
             // 
             // tabPage
@@ -356,7 +356,7 @@
             this.tabPage.Location = new System.Drawing.Point(4, 25);
             this.tabPage.Name = "tabPage";
             this.tabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage.Size = new System.Drawing.Size(988, 607);
+            this.tabPage.Size = new System.Drawing.Size(1030, 686);
             this.tabPage.TabIndex = 0;
             this.tabPage.Text = "tabPage1";
             // 
@@ -367,7 +367,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(988, 607);
+            this.tabPage2.Size = new System.Drawing.Size(988, 662);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             // 
@@ -376,7 +376,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(48)))), ((int)(((byte)(76)))));
-            this.ClientSize = new System.Drawing.Size(1213, 636);
+            this.ClientSize = new System.Drawing.Size(1255, 715);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.gunaControlBox1);
             this.Controls.Add(this.gunaPanel1);

@@ -34,7 +34,7 @@ namespace loginForm
                 if (dt.Rows.Count > 0)
                 {
                     notifyIcon2.BalloonTipTitle = "Error";
-                    notifyIcon2.BalloonTipText = "Borrower already exists";
+                    notifyIcon2.BalloonTipText = "Borrower Already Exists";
                     notifyIcon2.ShowBalloonTip(100);
                     notifyIcon2.Dispose();
                     return;
