@@ -28,7 +28,17 @@ namespace loginForm
         public void loadData()
         {
             var dt = Transaction.getAllTransaction(DTP_start.Value, DTP_end.Value);
-            datagrid_Reports.DataSource = dt;
+            if (dt.Rows.Count > 0)
+            {
+                datagrid_Reports.DataSource = dt;
+            }
+            else
+            {
+                notifyIcon2.BalloonTipTitle = "ERROR";
+                notifyIcon2.BalloonTipText = "No data available";
+                notifyIcon2.ShowBalloonTip(100);
+                notifyIcon2.Dispose();
+            }
         }
 
         private void ReportForm_FormClosing(object sender, FormClosingEventArgs e)
