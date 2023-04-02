@@ -38,7 +38,7 @@ namespace loginForm.Forms
             catch (Exception)
             {
 
-                Menu menu = new Menu();;
+                Menu menu = new Menu(); ;
                 notifyIcon1.BalloonTipText = "No Available Books";
                 notifyIcon1.ShowBalloonTip(100);
                 notifyIcon1.Dispose();

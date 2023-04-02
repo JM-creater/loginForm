@@ -332,6 +332,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Forms\Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
@@ -355,6 +356,23 @@
       <Project>{5593f1c0-9ca8-4ebd-a842-d72c9c132b33}</Project>
       <Name>login.form</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-close-window-100.png" />
+    <None Include="Resources\Systems and technology programming company logo %285%29.png" />
+    <None Include="Resources\Systems and technology programming company logo %286%29.png" />
+    <None Include="Resources\icons8-bell-96.png" />
+    <None Include="Resources\Systems and technology programming company logo %287%29.png" />
+    <None Include="Resources\icons8-left-arrow-32 %282%29.png" />
+    <None Include="Resources\icons8-right-arrow-32.png" />
+    <None Include="Resources\icons8-warning-shield-48.png" />
+    <None Include="Resources\icons8-dashboard-layout-48.png" />
+    <None Include="Resources\icons8-open-book-32.png" />
+    <None Include="Resources\icons8-borrow-book-50.png" />
+    <None Include="Resources\icons8-book-85.png" />
+    <None Include="Resources\icons8-circular-arrow-pointing-to-left-32.png" />
+    <None Include="Resources\icons8-graph-report-50.png" />
+    <None Include="Resources\icons8-logout-rounded-50.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Fody.4.0.2\build\Fody.targets" Condition="Exists('..\packages\Fody.4.0.2\build\Fody.targets')" />

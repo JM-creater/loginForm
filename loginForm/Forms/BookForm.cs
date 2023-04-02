@@ -100,8 +100,8 @@ namespace loginForm
         private void Book_Load(object sender, EventArgs e)
         {
             loadData();
-            txt_SearchBox.Text = "Search";
-            txt_SearchBox.ForeColor = SystemColors.GrayText;
+            //txt_SearchBox.Text = "Search";
+            //txt_SearchBox.ForeColor = SystemColors.GrayText;
         }
 
         private void datagrid_Book_CellContentClick(object sender, DataGridViewCellEventArgs e)

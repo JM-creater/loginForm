@@ -93,7 +93,7 @@
             this.gunaPanel1.Controls.Add(this.gunaLabel1);
             this.gunaPanel1.Location = new System.Drawing.Point(115, 95);
             this.gunaPanel1.Name = "gunaPanel1";
-            this.gunaPanel1.Size = new System.Drawing.Size(278, 133);
+            this.gunaPanel1.Size = new System.Drawing.Size(305, 133);
             this.gunaPanel1.TabIndex = 1;
             // 
             // gunaPanel2
@@ -101,9 +101,9 @@
             this.gunaPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.gunaPanel2.Controls.Add(this.gunaLabel5);
             this.gunaPanel2.Controls.Add(this.lblBorrower);
-            this.gunaPanel2.Location = new System.Drawing.Point(500, 95);
+            this.gunaPanel2.Location = new System.Drawing.Point(529, 95);
             this.gunaPanel2.Name = "gunaPanel2";
-            this.gunaPanel2.Size = new System.Drawing.Size(277, 133);
+            this.gunaPanel2.Size = new System.Drawing.Size(311, 133);
             this.gunaPanel2.TabIndex = 2;
             // 
             // gunaPanel3

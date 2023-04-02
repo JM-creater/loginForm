@@ -149,7 +149,7 @@
             // gunaPictureBox1
             // 
             this.gunaPictureBox1.BaseColor = System.Drawing.Color.White;
-            this.gunaPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("gunaPictureBox1.Image")));
+            this.gunaPictureBox1.Image = global::loginForm.Properties.Resources.Systems_and_technology_programming_company_logo__6_;
             this.gunaPictureBox1.Location = new System.Drawing.Point(478, 137);
             this.gunaPictureBox1.Name = "gunaPictureBox1";
             this.gunaPictureBox1.Size = new System.Drawing.Size(494, 380);
