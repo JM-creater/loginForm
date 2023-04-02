@@ -78,7 +78,8 @@ namespace loginForm
         private void txt_SearchBox_TextChanged(object sender, EventArgs e)
         {
             var dt = Book.getDataFromSearch(txt_SearchBox.Text);
-            datagrid_Book.DataSource = dt;
+            dt.DefaultView.RowFilter = "Book_Quantity > 0";
+            datagrid_Book.DataSource = dt.DefaultView;
 
             dt.Columns["Book_ID"].ColumnName = "ID";
             dt.Columns["Book_Title"].ColumnName = "Book Title";
@@ -89,7 +90,8 @@ namespace loginForm
         public void loadData()
         {
             var dt = Book.getAllData();
-            datagrid_Book.DataSource = dt;
+            dt.DefaultView.RowFilter = "Book_Quantity > 0";
+            datagrid_Book.DataSource = dt.DefaultView;
 
             dt.Columns["Book_ID"].ColumnName = "ID";
             dt.Columns["Book_Title"].ColumnName = "Book Title";
