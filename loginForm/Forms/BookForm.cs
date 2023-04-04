@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -153,16 +155,20 @@ namespace loginForm
                 DialogResult res = MessageBox.Show("Are you sure you want to delete?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (res == DialogResult.Yes)
                 {
-                    Book.Delete(txt_BookID.Text);
-                    txt_BookID.Clear();
-                    txt_BookTitle.Clear();
-                    txt_BookAuthor.Clear();
-                    txt_BookTitle.Focus();
-                    loadData();
-                    notifyIcon1.BalloonTipTitle = "Information";
-                    notifyIcon1.BalloonTipText = "You've successfully Delete Book";
-                    notifyIcon1.ShowBalloonTip(100);
-                    notifyIcon1.Dispose();
+                    DialogResult confirmRes = MessageBox.Show("Are you sure you want to permanently delete the data from the database?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (confirmRes == DialogResult.Yes)
+                    {
+                        Book.Delete(txt_BookID.Text);
+                        txt_BookID.Clear();
+                        txt_BookTitle.Clear();
+                        txt_BookAuthor.Clear();
+                        txt_BookTitle.Focus();
+                        loadData();
+                        notifyIcon1.BalloonTipTitle = "Information";
+                        notifyIcon1.BalloonTipText = "You've successfully Delete Book";
+                        notifyIcon1.ShowBalloonTip(100);
+                        notifyIcon1.Dispose();
+                    }
                 }
             }
             else

@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using login.form;
@@ -18,18 +19,39 @@ namespace loginForm
             InitializeComponent();
         }
 
+        public static bool IsValidName(string name)
+        {
+            string strRegex = @"^(?:[a-zA-Z][a-zA-Z0-9_\W]+)?$";
+            Regex reg = new Regex(strRegex);
+            if (reg.IsMatch(name))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         private void Borrower_Load(object sender, EventArgs e)
         {
             loadData();
-            txt_FnameSearch.Text = "Search";
-            txt_FnameSearch.ForeColor = SystemColors.GrayText;
+            //txt_FnameSearch.Text = "Search";
+            //txt_FnameSearch.ForeColor = SystemColors.GrayText;
         }
 
         private void btn_AddBorrower_Click(object sender, EventArgs e)
         {
-
             if (txt_Firstname.Text != "" && txt_Lastname.Text != "")
             {
+                if (!IsValidName(txt_Firstname.Text) || !IsValidName(txt_Lastname.Text))
+                {
+                    notifyIcon2.BalloonTipTitle = "Error";
+                    notifyIcon2.BalloonTipText = "Please Input a valid Borrower First Name and Last Name";
+                    notifyIcon2.ShowBalloonTip(100);
+                    notifyIcon2.Dispose();
+                    return;
+                }
                 DataTable dt = Borrower.IsAlreadyExistBorrower(txt_Firstname.Text, txt_Lastname.Text);
                 if (dt.Rows.Count > 0)
                 {
@@ -109,16 +131,20 @@ namespace loginForm
                 DialogResult res = MessageBox.Show("Are you sure you want to delete?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (res == DialogResult.Yes)
                 {
-                    Borrower.Delete(txt_BorrowerID.Text);
-                    txt_BorrowerID.Clear();
-                    txt_Firstname.Clear();
-                    txt_Lastname.Clear();
-                    txt_Firstname.Focus();
-                    loadData();
-                    notifyIcon1.BalloonTipTitle = "Information";
-                    notifyIcon1.BalloonTipText = "You've successfully Delete Borrower";
-                    notifyIcon1.ShowBalloonTip(100);
-                    notifyIcon1.Dispose();
+                    DialogResult confirmRes = MessageBox.Show("Are you sure you want to permanently delete the data from the database?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (confirmRes == DialogResult.Yes)
+                    {
+                        Borrower.Delete(txt_BorrowerID.Text);
+                        txt_BorrowerID.Clear();
+                        txt_Firstname.Clear();
+                        txt_Lastname.Clear();
+                        txt_Firstname.Focus();
+                        loadData();
+                        notifyIcon1.BalloonTipTitle = "Information";
+                        notifyIcon1.BalloonTipText = "You've successfully Delete Borrower";
+                        notifyIcon1.ShowBalloonTip(100);
+                        notifyIcon1.Dispose();
+                    }
                 }
             }
             else
