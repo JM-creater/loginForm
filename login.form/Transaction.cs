@@ -114,13 +114,13 @@ namespace login.form
             }
             catch (Exception)
             {
-
                 throw;
             }
             finally
             {
                 con.Close();
             }
+
             return dt;
         }
 

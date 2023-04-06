@@ -61,12 +61,6 @@ namespace loginForm.Forms
             }
         }
 
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-            LoginForm fm = new LoginForm();
-            this.Hide();
-            fm.Show();
-        }
 
         public static string Decrypt(string cipherText)
         {
@@ -117,5 +111,11 @@ namespace loginForm.Forms
             return encryptString;
         }
 
+        private void btn_can_Click(object sender, EventArgs e)
+        {
+            LoginForm fm = new LoginForm();
+            this.Hide();
+            fm.Show();
+        }
     }
 }

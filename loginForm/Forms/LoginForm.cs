@@ -50,7 +50,6 @@ namespace loginForm
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Register reg = new Register();
-
             this.Hide();
             reg.Show();
         }
@@ -122,6 +121,13 @@ namespace loginForm
                 }
             }
             return encryptString;
+        }
+
+        private void lblChange_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ChangePasswordForm form = new ChangePasswordForm();
+            this.Hide();
+            form.Show();
         }
     }
 }

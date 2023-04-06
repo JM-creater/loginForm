@@ -37,11 +37,10 @@
             this.gunaUser = new Guna.UI.WinForms.GunaTextBox();
             this.gunaPass = new Guna.UI.WinForms.GunaTextBox();
             this.gunaEnter = new Guna.UI.WinForms.GunaButton();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.notifyIcon2 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.btn_can = new Guna.UI.WinForms.GunaButton();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -142,19 +141,6 @@
             this.gunaEnter.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.gunaEnter.Click += new System.EventHandler(this.gunaEnter_Click);
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(358, 0);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(48, 43);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 13;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
-            // 
             // notifyIcon1
             // 
             this.notifyIcon1.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info;
@@ -169,13 +155,40 @@
             this.notifyIcon2.Text = "notifyIcon2";
             this.notifyIcon2.Visible = true;
             // 
+            // btn_can
+            // 
+            this.btn_can.AnimationHoverSpeed = 0.07F;
+            this.btn_can.AnimationSpeed = 0.03F;
+            this.btn_can.BackColor = System.Drawing.Color.Transparent;
+            this.btn_can.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(25)))), ((int)(((byte)(64)))));
+            this.btn_can.BorderColor = System.Drawing.Color.Black;
+            this.btn_can.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_can.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_can.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_can.ForeColor = System.Drawing.Color.White;
+            this.btn_can.Image = null;
+            this.btn_can.ImageSize = new System.Drawing.Size(20, 20);
+            this.btn_can.Location = new System.Drawing.Point(98, 481);
+            this.btn_can.Name = "btn_can";
+            this.btn_can.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(24)))), ((int)(((byte)(83)))));
+            this.btn_can.OnHoverBorderColor = System.Drawing.Color.Red;
+            this.btn_can.OnHoverForeColor = System.Drawing.Color.White;
+            this.btn_can.OnHoverImage = null;
+            this.btn_can.OnPressedColor = System.Drawing.Color.Black;
+            this.btn_can.Radius = 15;
+            this.btn_can.Size = new System.Drawing.Size(216, 45);
+            this.btn_can.TabIndex = 14;
+            this.btn_can.Text = "Cancel";
+            this.btn_can.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btn_can.Click += new System.EventHandler(this.btn_can_Click);
+            // 
             // forgotPassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(48)))), ((int)(((byte)(76)))));
-            this.ClientSize = new System.Drawing.Size(406, 494);
-            this.Controls.Add(this.pictureBox3);
+            this.ClientSize = new System.Drawing.Size(406, 553);
+            this.Controls.Add(this.btn_can);
             this.Controls.Add(this.gunaEnter);
             this.Controls.Add(this.gunaPass);
             this.Controls.Add(this.gunaUser);
@@ -187,7 +200,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Forgot Password";
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -201,8 +213,8 @@
         private Guna.UI.WinForms.GunaTextBox gunaUser;
         private Guna.UI.WinForms.GunaTextBox gunaPass;
         private Guna.UI.WinForms.GunaButton gunaEnter;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
         private System.Windows.Forms.NotifyIcon notifyIcon2;
+        private Guna.UI.WinForms.GunaButton btn_can;
     }
 }

@@ -120,10 +120,34 @@
   <metadata name="gunaElipse1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="gunaGradientPanel2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAFOSURBVChTDcp9S9tAAMDh+xJLr5frebke0pU2S7MkS2MM
+        aa2tc2OIiIwxRES26V4EERFhm+7ta//W5+9HmM6AYWdI3hnRBjGvgwlvg4zzoOAqKLkPKv4F24iefMpA
+        jshkTCsTXsmUY5lzJku+yYp7WfNXNgithgzUmOcqoVEp+yrjWBWcqSlfVc1dt+FPt0WEesSmjkn1OoYp
+        L8Oco7DkNKz4Eq6javitZgjVG7PZS5j0UmqdsacLjvSUU13zWTfc6pZfeo7omhhvJiQmozYFK1NyaCpO
+        zDaXpuXWzHk0C4S0Cd6mPLM5lX3B0lYc2poT23BhZ9xs7PCwsUR0XIpzGbErqKKS3WiLg6jhfdTyKZpz
+        Yxf8tCtE0F/Hfs64X1K6ioWrOXDr6GZ8dAuu3ZIfbg/xxGdYXzDyU0q/xY5veONb3vk5H/wu137Fd7/P
+        f8leo2lJWO43AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="gunaGradientPanel1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAFOSURBVChTDcp9S9tAAMDh+xJLr5frebke0pU2S7MkS2MM
+        aa2tc2OIiIwxRES26V4EERFhm+7ta//W5+9HmM6AYWdI3hnRBjGvgwlvg4zzoOAqKLkPKv4F24iefMpA
+        jshkTCsTXsmUY5lzJku+yYp7WfNXNgithgzUmOcqoVEp+yrjWBWcqSlfVc1dt+FPt0WEesSmjkn1OoYp
+        L8Oco7DkNKz4Eq6javitZgjVG7PZS5j0UmqdsacLjvSUU13zWTfc6pZfeo7omhhvJiQmozYFK1NyaCpO
+        zDaXpuXWzHk0C4S0Cd6mPLM5lX3B0lYc2poT23BhZ9xs7PCwsUR0XIpzGbErqKKS3WiLg6jhfdTyKZpz
+        Yxf8tCtE0F/Hfs64X1K6ioWrOXDr6GZ8dAuu3ZIfbg/xxGdYXzDyU0q/xY5veONb3vk5H/wu137Fd7/P
+        f8leo2lJWO43AAAAAElFTkSuQmCC
+</value>
+  </data>
   <metadata name="gunaDragControl1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>151, 17</value>
   </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pictureBox3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
@@ -149,22 +173,10 @@
         Y4wZNQsL/wOpHygmGDlwygAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="gunaGradientPanel1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAFOSURBVChTDcp9S9tAAMDh+xJLr5frebke0pU2S7MkS2MM
-        aa2tc2OIiIwxRES26V4EERFhm+7ta//W5+9HmM6AYWdI3hnRBjGvgwlvg4zzoOAqKLkPKv4F24iefMpA
-        jshkTCsTXsmUY5lzJku+yYp7WfNXNgithgzUmOcqoVEp+yrjWBWcqSlfVc1dt+FPt0WEesSmjkn1OoYp
-        L8Oco7DkNKz4Eq6javitZgjVG7PZS5j0UmqdsacLjvSUU13zWTfc6pZfeo7omhhvJiQmozYFK1NyaCpO
-        zDaXpuXWzHk0C4S0Cd6mPLM5lX3B0lYc2poT23BhZ9xs7PCwsUR0XIpzGbErqKKS3WiLg6jhfdTyKZpz
-        Yxf8tCtE0F/Hfs64X1K6ioWrOXDr6GZ8dAuu3ZIfbg/xxGdYXzDyU0q/xY5veONb3vk5H/wu137Fd7/P
-        f8leo2lJWO43AAAAAElFTkSuQmCC
-</value>
-  </data>
   <data name="gunaPictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAfQAAAH0CAYAAADL1t+KAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vgAADr4B6kKxwAAAADF0RVh0Q29tbWVudAB4cjpkOkRBRmNCRGwwSTVROjEzLGo6MTkzNjkzNzgsdDoy
+        vQAADr0BR/uQrQAAADF0RVh0Q29tbWVudAB4cjpkOkRBRmNCRGwwSTVROjEzLGo6MTkzNjkzNzgsdDoy
         MzAzMDIxMUToZtYAACLbSURBVHhe7d0LtHTpeCdwVjerXZY0iywjSNwniaGXyzQxaEFjJXSj9RdMhJUg
         bWSIWxjjMowIMxMtERligiBkMhLMEMQ1QcaIuI1OYlyaSFYiRLvfur+e/7PPW3V27bPrVJ1zquq7/X5r
         /df3nb3f993V36Geqr3f/e7LAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -315,18 +327,6 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA2JTLXOb/A1Xg
         pC/nVNR/AAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="gunaGradientPanel2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAFOSURBVChTDcp9S9tAAMDh+xJLr5frebke0pU2S7MkS2MM
-        aa2tc2OIiIwxRES26V4EERFhm+7ta//W5+9HmM6AYWdI3hnRBjGvgwlvg4zzoOAqKLkPKv4F24iefMpA
-        jshkTCsTXsmUY5lzJku+yYp7WfNXNgithgzUmOcqoVEp+yrjWBWcqSlfVc1dt+FPt0WEesSmjkn1OoYp
-        L8Oco7DkNKz4Eq6javitZgjVG7PZS5j0UmqdsacLjvSUU13zWTfc6pZfeo7omhhvJiQmozYFK1NyaCpO
-        zDaXpuXWzHk0C4S0Cd6mPLM5lX3B0lYc2poT23BhZ9xs7PCwsUR0XIpzGbErqKKS3WiLg6jhfdTyKZpz
-        Yxf8tCtE0F/Hfs64X1K6ioWrOXDr6GZ8dAuu3ZIfbg/xxGdYXzDyU0q/xY5veONb3vk5H/wu137Fd7/P
-        f8leo2lJWO43AAAAAElFTkSuQmCC
 </value>
   </data>
   <metadata name="notifyIcon1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">

@@ -50,6 +50,7 @@
             this.gunaGradientPanel2 = new Guna.UI.WinForms.GunaGradientPanel();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.notifyIcon2 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.lblChange = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.gunaGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
@@ -162,10 +163,10 @@
             this.lbl_forgot.LinkColor = System.Drawing.Color.IndianRed;
             this.lbl_forgot.Location = new System.Drawing.Point(195, 547);
             this.lbl_forgot.Name = "lbl_forgot";
-            this.lbl_forgot.Size = new System.Drawing.Size(145, 20);
+            this.lbl_forgot.Size = new System.Drawing.Size(147, 20);
             this.lbl_forgot.TabIndex = 11;
             this.lbl_forgot.TabStop = true;
-            this.lbl_forgot.Text = "Forgot Password?";
+            this.lbl_forgot.Text = "Decrypt Password";
             this.lbl_forgot.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked_1);
             // 
             // label5
@@ -245,7 +246,7 @@
             this.btn_login.ForeColor = System.Drawing.Color.White;
             this.btn_login.Image = null;
             this.btn_login.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_login.Location = new System.Drawing.Point(74, 598);
+            this.btn_login.Location = new System.Drawing.Point(74, 616);
             this.btn_login.Name = "btn_login";
             this.btn_login.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(24)))), ((int)(((byte)(83)))));
             this.btn_login.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(24)))), ((int)(((byte)(83)))));
@@ -270,9 +271,9 @@
             this.gunaGradientPanel2.GradientColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(50)))), ((int)(((byte)(72)))));
             this.gunaGradientPanel2.GradientColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(20)))), ((int)(((byte)(44)))));
             this.gunaGradientPanel2.GradientColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(24)))), ((int)(((byte)(83)))));
-            this.gunaGradientPanel2.Location = new System.Drawing.Point(0, 664);
+            this.gunaGradientPanel2.Location = new System.Drawing.Point(0, 678);
             this.gunaGradientPanel2.Name = "gunaGradientPanel2";
-            this.gunaGradientPanel2.Size = new System.Drawing.Size(421, 200);
+            this.gunaGradientPanel2.Size = new System.Drawing.Size(421, 186);
             this.gunaGradientPanel2.TabIndex = 15;
             this.gunaGradientPanel2.Text = "gunaGradientPanel2";
             // 
@@ -290,12 +291,26 @@
             this.notifyIcon2.Text = "notifyIcon2";
             this.notifyIcon2.Visible = true;
             // 
+            // lblChange
+            // 
+            this.lblChange.AutoSize = true;
+            this.lblChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblChange.LinkColor = System.Drawing.Color.IndianRed;
+            this.lblChange.Location = new System.Drawing.Point(195, 575);
+            this.lblChange.Name = "lblChange";
+            this.lblChange.Size = new System.Drawing.Size(145, 20);
+            this.lblChange.TabIndex = 16;
+            this.lblChange.TabStop = true;
+            this.lblChange.Text = "Change Password";
+            this.lblChange.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblChange_LinkClicked);
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(48)))), ((int)(((byte)(76)))));
-            this.ClientSize = new System.Drawing.Size(421, 729);
+            this.ClientSize = new System.Drawing.Size(421, 746);
+            this.Controls.Add(this.lblChange);
             this.Controls.Add(this.gunaGradientPanel2);
             this.Controls.Add(this.btn_login);
             this.Controls.Add(this.gunaGradientPanel1);
@@ -343,6 +358,7 @@
         private Guna.UI.WinForms.GunaPictureBox gunaPictureBox1;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
         private System.Windows.Forms.NotifyIcon notifyIcon2;
+        private System.Windows.Forms.LinkLabel lblChange;
     }
 }
 
