@@ -46,6 +46,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txt_username = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -127,7 +128,7 @@
             this.txt_confirmpass.Location = new System.Drawing.Point(79, 452);
             this.txt_confirmpass.Name = "txt_confirmpass";
             this.txt_confirmpass.Size = new System.Drawing.Size(304, 17);
-            this.txt_confirmpass.TabIndex = 12;
+            this.txt_confirmpass.TabIndex = 4;
             // 
             // txt_newpass
             // 
@@ -138,7 +139,7 @@
             this.txt_newpass.Location = new System.Drawing.Point(79, 378);
             this.txt_newpass.Name = "txt_newpass";
             this.txt_newpass.Size = new System.Drawing.Size(304, 17);
-            this.txt_newpass.TabIndex = 8;
+            this.txt_newpass.TabIndex = 3;
             // 
             // txt_curpass
             // 
@@ -149,7 +150,7 @@
             this.txt_curpass.Location = new System.Drawing.Point(79, 310);
             this.txt_curpass.Name = "txt_curpass";
             this.txt_curpass.Size = new System.Drawing.Size(304, 17);
-            this.txt_curpass.TabIndex = 7;
+            this.txt_curpass.TabIndex = 2;
             // 
             // btn_update
             // 
@@ -165,7 +166,7 @@
             this.btn_update.ForeColor = System.Drawing.Color.White;
             this.btn_update.Image = null;
             this.btn_update.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_update.Location = new System.Drawing.Point(118, 513);
+            this.btn_update.Location = new System.Drawing.Point(122, 510);
             this.btn_update.Name = "btn_update";
             this.btn_update.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(24)))), ((int)(((byte)(83)))));
             this.btn_update.OnHoverBorderColor = System.Drawing.Color.Red;
@@ -174,7 +175,7 @@
             this.btn_update.OnPressedColor = System.Drawing.Color.Black;
             this.btn_update.Radius = 8;
             this.btn_update.Size = new System.Drawing.Size(216, 42);
-            this.btn_update.TabIndex = 16;
+            this.btn_update.TabIndex = 5;
             this.btn_update.Text = "Change";
             this.btn_update.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
@@ -193,7 +194,7 @@
             this.btn_return.ForeColor = System.Drawing.Color.White;
             this.btn_return.Image = null;
             this.btn_return.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_return.Location = new System.Drawing.Point(118, 573);
+            this.btn_return.Location = new System.Drawing.Point(122, 570);
             this.btn_return.Name = "btn_return";
             this.btn_return.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(24)))), ((int)(((byte)(83)))));
             this.btn_return.OnHoverBorderColor = System.Drawing.Color.Red;
@@ -202,7 +203,7 @@
             this.btn_return.OnPressedColor = System.Drawing.Color.Black;
             this.btn_return.Radius = 8;
             this.btn_return.Size = new System.Drawing.Size(216, 42);
-            this.btn_return.TabIndex = 17;
+            this.btn_return.TabIndex = 6;
             this.btn_return.Text = "Cancel";
             this.btn_return.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btn_return.Click += new System.EventHandler(this.btn_return_Click);
@@ -233,7 +234,7 @@
             this.txt_username.Location = new System.Drawing.Point(79, 244);
             this.txt_username.Name = "txt_username";
             this.txt_username.Size = new System.Drawing.Size(304, 17);
-            this.txt_username.TabIndex = 19;
+            this.txt_username.TabIndex = 1;
             // 
             // panel2
             // 
@@ -243,12 +244,17 @@
             this.panel2.Size = new System.Drawing.Size(304, 1);
             this.panel2.TabIndex = 21;
             // 
+            // gunaElipse1
+            // 
+            this.gunaElipse1.Radius = 15;
+            this.gunaElipse1.TargetControl = this;
+            // 
             // ChangePasswordForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(48)))), ((int)(((byte)(76)))));
-            this.ClientSize = new System.Drawing.Size(461, 655);
+            this.ClientSize = new System.Drawing.Size(461, 640);
             this.Controls.Add(this.txt_newpass);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.panel5);
@@ -292,5 +298,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txt_username;
         private System.Windows.Forms.Panel panel2;
+        private Guna.UI.WinForms.GunaElipse gunaElipse1;
     }
 }

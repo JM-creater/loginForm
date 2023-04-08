@@ -5,13 +5,14 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web.UI.WebControls;
 using System.Windows.Forms;
 using login.form;
-using Microsoft.VisualBasic;
 
 namespace loginForm.Forms
 {
@@ -24,39 +25,29 @@ namespace loginForm.Forms
 
         private void btn_update_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection(Database.ConnectionString);
-
-            try
+            SqlConnection connect = new SqlConnection(Database.ConnectionString);
+            connect.Open();
+            string username = txt_username.Text;
+            string password = txt_curpass.Text;
+            string newPassword = txt_newpass.Text;
+            string confirmPassword = txt_confirmpass.Text;
+            string sqlquery = "UPDATE dbo.table_user SET User_password=@newpass where User_username=@username";
+            SqlCommand cmd = new SqlCommand(sqlquery, connect);
+            cmd.Parameters.AddWithValue("@newpass", txt_confirmpass.Text);
+            cmd.Parameters.AddWithValue("@username", txt_username.Text);
+            cmd.Parameters.AddWithValue("@password", txt_curpass.Text);
+            cmd.Connection = connect;
+            cmd.ExecuteNonQuery();
+            SqlDataReader reader = null;
+            reader = cmd.ExecuteReader();
+            while (reader.Read())
             {
-                conn.Open();
-                string sqlQuery = "UPDATE dbo.table_user SET User_password=@newpass WHERE User_username=@username AND User_password=@password";
-                SqlCommand command = new SqlCommand(sqlQuery, conn);
-                command.Parameters.AddWithValue("@newpass", txt_newpass.Text);
-                command.Parameters.AddWithValue("@username", txt_username.Text);
-                command.Parameters.AddWithValue("@password", txt_curpass.Text);
-
-                int rowsAffected = command.ExecuteNonQuery();
-
-                if (rowsAffected > 0)
-                {
-                    MessageBox.Show("Password changed successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    LoginForm login = new LoginForm();
-                    this.Close();
-                    login.Show();
-                }
-                else
-                {
-                    MessageBox.Show("Incorrect username or current password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                if ((txt_newpass.Text == reader["newPassword"].ToString()) & (txt_confirmpass.Text == (reader["confirmPassword"].ToString()))) { }
             }
-            catch (Exception)
-            {
-                throw;
-            }
-            finally
-            {
-                conn.Close();
-            }
+            MessageBox.Show("Password Changed Successfully!");
+            LoginForm login = new LoginForm();
+            this.Hide();
+            login.Show();
         }
 
         private void btn_return_Click(object sender, EventArgs e)

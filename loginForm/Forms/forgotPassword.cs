@@ -61,7 +61,6 @@ namespace loginForm.Forms
             }
         }
 
-
         public static string Decrypt(string cipherText)
         {
             string EncryptionKey = "0ram@1234xxxxxxxxxxtttttuuuuuiiiiio";
