@@ -29,9 +29,10 @@ namespace loginForm.Forms
                     Menu menu = new Menu();
                     Book.Update(dtt.Rows[0]["Book_ID"].ToString(), dtt.Rows[0]["Book_Title"].ToString(), dtt.Rows[0]["Book_Author"].ToString(), int.Parse(dtt.Rows[0]["Book_Quantity"].ToString()) - 1);
                     Transaction.Create(cb_Books.SelectedValue.ToString(), cb_Borrowers.SelectedValue.ToString(), DateTime.Now);
-                    notifyIcon1.BalloonTipText = "You've Successfully Borrowed A Book";
-                    notifyIcon1.ShowBalloonTip(100);
-                    notifyIcon1.Dispose();
+                    MessageBox.Show("You've Successfully Borrowed A Book", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //notifyIcon1.BalloonTipText = "You've Successfully Borrowed A Book";
+                    //notifyIcon1.ShowBalloonTip(100);
+                    //notifyIcon1.Dispose();
                     fillComboBox();
                 }
             }
@@ -39,9 +40,10 @@ namespace loginForm.Forms
             {
 
                 Menu menu = new Menu(); ;
-                notifyIcon1.BalloonTipText = "No Available Books";
-                notifyIcon1.ShowBalloonTip(100);
-                notifyIcon1.Dispose();
+                MessageBox.Show("No Available Books", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //notifyIcon1.BalloonTipText = "No Available Books";
+                //notifyIcon1.ShowBalloonTip(100);
+                //notifyIcon1.Dispose();
                 fillComboBox();
             }
         }

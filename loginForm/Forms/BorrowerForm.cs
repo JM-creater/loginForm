@@ -100,19 +100,30 @@ namespace loginForm
         {
             if (txt_BorrowerID.Text != "")
             {
-                DialogResult res = MessageBox.Show("Are you sure you want to Edit?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (res == DialogResult.Yes)
+                DataTable dt = Borrower.IsAlreadyExistBorrower(txt_Firstname.Text, txt_Lastname.Text);
+                if (dt.Rows.Count == 0)
                 {
-                    Borrower.Update(txt_BorrowerID.Text, txt_Firstname.Text, txt_Lastname.Text);
-                    txt_BorrowerID.Clear();
-                    txt_Firstname.Clear();
-                    txt_Lastname.Clear();
-                    txt_Firstname.Focus();
-                    loadData();
-                    notifyIcon1.BalloonTipTitle = "Information";
-                    notifyIcon1.BalloonTipText = "You've successfully Edited Borrower";
-                    notifyIcon1.ShowBalloonTip(100);
-                    notifyIcon1.Dispose();
+                    DialogResult res = MessageBox.Show("Are you sure you want to Edit?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (res == DialogResult.Yes)
+                    {
+                        Borrower.Update(txt_BorrowerID.Text, txt_Firstname.Text, txt_Lastname.Text);
+                        txt_BorrowerID.Clear();
+                        txt_Firstname.Clear();
+                        txt_Lastname.Clear();
+                        txt_Firstname.Focus();
+                        loadData();
+                        notifyIcon1.BalloonTipTitle = "Information";
+                        notifyIcon1.BalloonTipText = "You've successfully Edited Borrower";
+                        notifyIcon1.ShowBalloonTip(100);
+                        notifyIcon1.Dispose();
+                    }
+                }
+                else
+                {
+                    notifyIcon2.BalloonTipTitle = "Error";
+                    notifyIcon2.BalloonTipText = "Borrower name already exists in the database";
+                    notifyIcon2.ShowBalloonTip(100);
+                    notifyIcon2.Dispose();
                 }
             }
             else

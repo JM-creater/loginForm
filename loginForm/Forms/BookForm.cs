@@ -123,20 +123,31 @@ namespace loginForm
         {
             if (txt_BookID.Text != "")
             {
-                DialogResult res = MessageBox.Show("Are you sure you want to Edit?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (res == DialogResult.Yes)
+                DataTable dt = Book.IsAlreadyExistBook(txt_BookTitle.Text, txt_BookAuthor.Text);
+                if (dt.Rows.Count == 0)
                 {
-                    Book.Update(txt_BookID.Text, txt_BookTitle.Text, txt_BookAuthor.Text, ((int)numeric_BookQty.Value));
-                    txt_BookID.Clear();
-                    txt_BookTitle.Clear();
-                    txt_BookAuthor.Clear();
-                    txt_BookTitle.Focus();
-                    numeric_BookQty.Value = 0;
-                    loadData();
-                    notifyIcon1.BalloonTipTitle = "Information";
-                    notifyIcon1.BalloonTipText = "You've successfully Edited Book";
-                    notifyIcon1.ShowBalloonTip(100);
-                    notifyIcon1.Dispose();
+                    DialogResult res = MessageBox.Show("Are you sure you want to Edit?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (res == DialogResult.Yes)
+                    {
+                        Book.Update(txt_BookID.Text, txt_BookTitle.Text, txt_BookAuthor.Text, ((int)numeric_BookQty.Value));
+                        txt_BookID.Clear();
+                        txt_BookTitle.Clear();
+                        txt_BookAuthor.Clear();
+                        txt_BookTitle.Focus();
+                        numeric_BookQty.Value = 0;
+                        loadData();
+                        notifyIcon1.BalloonTipTitle = "Information";
+                        notifyIcon1.BalloonTipText = "You've successfully Edited Book";
+                        notifyIcon1.ShowBalloonTip(100);
+                        notifyIcon1.Dispose();
+                    }
+                }
+                else
+                {
+                    notifyIcon2.BalloonTipTitle = "Error";
+                    notifyIcon2.BalloonTipText = "The book already exists in the database";
+                    notifyIcon2.ShowBalloonTip(100);
+                    notifyIcon2.Dispose();
                 }
             }
             else

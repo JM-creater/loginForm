@@ -47,10 +47,11 @@ namespace loginForm.Forms
             {
                 var IsReturned = 1;
                 Transaction.Update(txt_ID.Text, IsReturned, DateTime.Now);
-                notifyIcon1.BalloonTipText = "You've Successfully Returned the Book";
-                notifyIcon1.ShowBalloonTip(100);
-                notifyIcon1.Dispose();
-
+                MessageBox.Show("You've Successfully Returned the Book", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //notifyIcon1.BalloonTipText = "You've Successfully Returned the Book";
+                //notifyIcon1.ShowBalloonTip(100);
+                //notifyIcon1.Dispose();
+                
                 txt_IsReturned.Clear();
                 txt_BookTitle.Clear();
                 txt_Fullname.Clear();
@@ -59,16 +60,18 @@ namespace loginForm.Forms
             }
             else if (txt_IsReturned.Text == "True")
             {
-                notifyIcon1.BalloonTipText = "You've Already Returned the Book";
-                notifyIcon1.ShowBalloonTip(100);
-                notifyIcon1.Dispose();
+                MessageBox.Show("You've Already Returned the Book", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //notifyIcon1.BalloonTipText = "You've Already Returned the Book";
+                //notifyIcon1.ShowBalloonTip(100);
+                //notifyIcon1.Dispose();
 
             }
             else
             {
-                notifyIcon1.BalloonTipText = "Please Select Data that you want to return a book";
-                notifyIcon1.ShowBalloonTip(100);
-                notifyIcon1.Dispose();
+                MessageBox.Show("Please Select Data that you want to return a book", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //notifyIcon1.BalloonTipText = "Please Select Data that you want to return a book";
+                //notifyIcon1.ShowBalloonTip(100);
+                //notifyIcon1.Dispose();
             }
         }
 
