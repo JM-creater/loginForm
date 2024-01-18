@@ -77,9 +77,9 @@ namespace loginForm
                 notifyIcon1.ShowBalloonTip(100);
                 notifyIcon1.Dispose();
 
-                //loadingScreenForm loadingScreenForm = new loadingScreenForm();
-                //loadingScreenForm.Show();
-                //this.Hide();
+                loadingScreenForm loadingScreenForm = new loadingScreenForm();
+                loadingScreenForm.Show();
+                this.Hide();
                 Menu menu = new Menu();
                 menu.Show();
                 this.Hide();
